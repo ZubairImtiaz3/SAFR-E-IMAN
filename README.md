@@ -1,12 +1,16 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created with Tailwind CSS and [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
+### `npm i`
+
+Command to install node modules
+
 In the project directory, you can run:
 
-### `npm start`
+### `npm run start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
