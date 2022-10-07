@@ -1,6 +1,10 @@
 import topRated from "../assets/toprated.jpg";
 import Animatedpage from "./Animatedpage";
 
+//import animation
+import "animate.css";
+import { AnimationOnScroll } from "react-animation-on-scroll";
+
 function Umarah(props) {
   return (
     <>
@@ -35,313 +39,331 @@ function Umarah(props) {
 
           <div className="containerPkg max-w-[94.5%] mx-auto flex items-center flex-wrap gap-32 xl:gap-0 justify-center pb-10 pt-20">
             <div className="contentPkg w-[23.563rem] h-[35rem]">
-              <div className="containerChild">
-                <div className="contentContainerChild bg-black flex justify-center rounded-xl h-[13.313rem] items-center">
-                  <h2 className="font-Poppins text-4xl sm:text-[2.625rem] text-white font-medium">
-                    Rs 1,80,000/-
-                  </h2>
+              <AnimationOnScroll
+                animateOnce={true}
+                duration={2}
+                animateIn="animate__fadeInLeft"
+              >
+                <div className="containerChild">
+                  <div className="contentContainerChild bg-black flex justify-center rounded-xl h-[13.313rem] items-center">
+                    <h2 className="font-Poppins text-4xl sm:text-[2.625rem] text-white font-medium">
+                      Rs 1,80,000/-
+                    </h2>
+                  </div>
                 </div>
-              </div>
 
-              <div className="containerChild flex justify-center flex-col items-center space-y-12 bg-white h-[21.813rem]">
-                <div className="containerChild font-Poppins text-xs space-y-6">
-                  <p className="pt-8 text-center max-w-[14rem] sm:max-w-[18rem]">
-                    Don't worry if you afford less money, You can still perform
-                    Umrah. We have cheapest Umrah package for 21 Days. Book Now
-                    and Pack your Bags
-                  </p>
-                  <ul className="space-y-3">
-                    <li className="flex items-center gap-8">
-                      <svg
-                        width="19"
-                        height="12"
-                        viewBox="0 0 19 12"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M2 5.36842L5.67452 9.33949C6.02199 9.715 6.59685 9.76768 7.00679 9.46159L17 2"
-                          stroke="black"
-                          strokeWidth="3"
-                          strokeLinecap="round"
-                        />
-                      </svg>
-                      Return Air Ticket
-                    </li>
-                    <li className="flex items-center gap-8">
-                      <svg
-                        width="19"
-                        height="12"
-                        viewBox="0 0 19 12"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M2 5.36842L5.67452 9.33949C6.02199 9.715 6.59685 9.76768 7.00679 9.46159L17 2"
-                          stroke="black"
-                          strokeWidth="3"
-                          strokeLinecap="round"
-                        />
-                      </svg>
-                      Umrah Visa
-                    </li>
-                    <li className="flex items-center gap-8">
-                      <svg
-                        width="19"
-                        height="12"
-                        viewBox="0 0 19 12"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M2 5.36842L5.67452 9.33949C6.02199 9.715 6.59685 9.76768 7.00679 9.46159L17 2"
-                          stroke="black"
-                          strokeWidth="3"
-                          strokeLinecap="round"
-                        />
-                      </svg>
-                      Transport (4 ways)
-                    </li>
-                    <li className="flex items-center gap-8">
-                      <svg
-                        width="19"
-                        height="12"
-                        viewBox="0 0 19 12"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M2 5.36842L5.67452 9.33949C6.02199 9.715 6.59685 9.76768 7.00679 9.46159L17 2"
-                          stroke="black"
-                          strokeWidth="3"
-                          strokeLinecap="round"
-                        />
-                      </svg>
-                      Hotel (1000m)
-                    </li>
-                  </ul>
+                <div className="containerChild flex justify-center flex-col items-center space-y-12 bg-white h-[21.813rem]">
+                  <div className="containerChild font-Poppins text-xs space-y-6">
+                    <p className="pt-8 text-center max-w-[14rem] sm:max-w-[18rem]">
+                      Don't worry if you afford less money, You can still
+                      perform Umrah. We have cheapest Umrah package for 21 Days.
+                      Book Now and Pack your Bags
+                    </p>
+                    <ul className="space-y-3">
+                      <li className="flex items-center gap-8">
+                        <svg
+                          width="19"
+                          height="12"
+                          viewBox="0 0 19 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2 5.36842L5.67452 9.33949C6.02199 9.715 6.59685 9.76768 7.00679 9.46159L17 2"
+                            stroke="black"
+                            strokeWidth="3"
+                            strokeLinecap="round"
+                          />
+                        </svg>
+                        Return Air Ticket
+                      </li>
+                      <li className="flex items-center gap-8">
+                        <svg
+                          width="19"
+                          height="12"
+                          viewBox="0 0 19 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2 5.36842L5.67452 9.33949C6.02199 9.715 6.59685 9.76768 7.00679 9.46159L17 2"
+                            stroke="black"
+                            strokeWidth="3"
+                            strokeLinecap="round"
+                          />
+                        </svg>
+                        Umrah Visa
+                      </li>
+                      <li className="flex items-center gap-8">
+                        <svg
+                          width="19"
+                          height="12"
+                          viewBox="0 0 19 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2 5.36842L5.67452 9.33949C6.02199 9.715 6.59685 9.76768 7.00679 9.46159L17 2"
+                            stroke="black"
+                            strokeWidth="3"
+                            strokeLinecap="round"
+                          />
+                        </svg>
+                        Transport (4 ways)
+                      </li>
+                      <li className="flex items-center gap-8">
+                        <svg
+                          width="19"
+                          height="12"
+                          viewBox="0 0 19 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2 5.36842L5.67452 9.33949C6.02199 9.715 6.59685 9.76768 7.00679 9.46159L17 2"
+                            stroke="black"
+                            strokeWidth="3"
+                            strokeLinecap="round"
+                          />
+                        </svg>
+                        Hotel (1000m)
+                      </li>
+                    </ul>
+                  </div>
+                  <a
+                    target="_blank"
+                    href="https://api.whatsapp.com/send?phone=923446463437&text=Salam%20!%20Want%20to%20book%20your%20BUDGET%20Umrah%20Package"
+                  >
+                    <button className="buyNowBtn font-Poppins text-xl sm:text-2xl text-white">
+                      Buy Now
+                    </button>
+                  </a>
                 </div>
-                <a
-                  target="_blank"
-                  href="https://api.whatsapp.com/send?phone=923446463437&text=Salam%20!%20Want%20to%20book%20your%20BUDGET%20Umrah%20Package"
-                >
-                  <button className="buyNowBtn font-Poppins text-xl sm:text-2xl text-white">
-                    Buy Now
-                  </button>
-                </a>
-              </div>
+              </AnimationOnScroll>
             </div>
 
             <div className="contentPkg w-[23.563rem] h-[35rem] xl:w-[25.563rem] xl:h-[41.063rem]">
-              <div className="containerChild">
-                <div className="contentContainerChild2 flex justify-center rounded-xl h-[13.313rem] xl:h-[15.563rem] items-center">
-                  <h2 className="font-Poppins text-4xl sm:text-[2.625rem] text-white font-medium">
-                    Rs 1,95,000/-
-                  </h2>
+              <AnimationOnScroll
+                animateOnce={true}
+                duration={1}
+                animateIn="animate__fadeInUp"
+              >
+                <div className="containerChild">
+                  <div className="contentContainerChild2 flex justify-center rounded-xl h-[13.313rem] xl:h-[15.563rem] items-center">
+                    <h2 className="font-Poppins text-4xl sm:text-[2.625rem] text-white font-medium">
+                      Rs 1,95,000/-
+                    </h2>
+                  </div>
                 </div>
-              </div>
 
-              <div className="containerChild flex justify-center flex-col items-center space-y-12 bg-white h-[21.813rem] xl:h-[25.438rem]">
-                <div className="containerChild font-Poppins text-xs space-y-6">
-                  <p className="pt-8 text-center max-w-[14rem] sm:max-w-[18rem]">
-                    Perform the Religious Ritual with all the comfort at low
-                    price. You will definately experiance the best services
-                    related to the travelling, cuisine and accomodation
-                  </p>
-                  <ul className="space-y-3">
-                    <li className="flex items-center gap-8">
-                      <svg
-                        width="19"
-                        height="12"
-                        viewBox="0 0 19 12"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M2 5.36842L5.67452 9.33949C6.02199 9.715 6.59685 9.76768 7.00679 9.46159L17 2"
-                          stroke="black"
-                          strokeWidth="3"
-                          strokeLinecap="round"
-                        />
-                      </svg>
-                      Return Air Ticket
-                    </li>
-                    <li className="flex items-center gap-8">
-                      <svg
-                        width="19"
-                        height="12"
-                        viewBox="0 0 19 12"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M2 5.36842L5.67452 9.33949C6.02199 9.715 6.59685 9.76768 7.00679 9.46159L17 2"
-                          stroke="black"
-                          strokeWidth="3"
-                          strokeLinecap="round"
-                        />
-                      </svg>
-                      Umrah Visa
-                    </li>
-                    <li className="flex items-center gap-8">
-                      <svg
-                        width="19"
-                        height="12"
-                        viewBox="0 0 19 12"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M2 5.36842L5.67452 9.33949C6.02199 9.715 6.59685 9.76768 7.00679 9.46159L17 2"
-                          stroke="black"
-                          strokeWidth="3"
-                          strokeLinecap="round"
-                        />
-                      </svg>
-                      Transport (4 ways)
-                    </li>
-                    <li className="flex items-center gap-8">
-                      <svg
-                        width="19"
-                        height="12"
-                        viewBox="0 0 19 12"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M2 5.36842L5.67452 9.33949C6.02199 9.715 6.59685 9.76768 7.00679 9.46159L17 2"
-                          stroke="black"
-                          strokeWidth="3"
-                          strokeLinecap="round"
-                        />
-                      </svg>
-                      Makkah Hotel (500m)
-                    </li>
-                    <li className="flex items-center gap-8">
-                      <svg
-                        width="19"
-                        height="12"
-                        viewBox="0 0 19 12"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M2 5.36842L5.67452 9.33949C6.02199 9.715 6.59685 9.76768 7.00679 9.46159L17 2"
-                          stroke="black"
-                          strokeWidth="3"
-                          strokeLinecap="round"
-                        />
-                      </svg>
-                      Madina Hotel (500m)
-                    </li>
-                  </ul>
+                <div className="containerChild flex justify-center flex-col items-center space-y-12 bg-white h-[21.813rem] xl:h-[25.438rem]">
+                  <div className="containerChild font-Poppins text-xs space-y-6">
+                    <p className="pt-8 text-center max-w-[14rem] sm:max-w-[18rem]">
+                      Perform the Religious Ritual with all the comfort at low
+                      price. You will definately experiance the best services
+                      related to the travelling, cuisine and accomodation
+                    </p>
+                    <ul className="space-y-3">
+                      <li className="flex items-center gap-8">
+                        <svg
+                          width="19"
+                          height="12"
+                          viewBox="0 0 19 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2 5.36842L5.67452 9.33949C6.02199 9.715 6.59685 9.76768 7.00679 9.46159L17 2"
+                            stroke="black"
+                            strokeWidth="3"
+                            strokeLinecap="round"
+                          />
+                        </svg>
+                        Return Air Ticket
+                      </li>
+                      <li className="flex items-center gap-8">
+                        <svg
+                          width="19"
+                          height="12"
+                          viewBox="0 0 19 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2 5.36842L5.67452 9.33949C6.02199 9.715 6.59685 9.76768 7.00679 9.46159L17 2"
+                            stroke="black"
+                            strokeWidth="3"
+                            strokeLinecap="round"
+                          />
+                        </svg>
+                        Umrah Visa
+                      </li>
+                      <li className="flex items-center gap-8">
+                        <svg
+                          width="19"
+                          height="12"
+                          viewBox="0 0 19 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2 5.36842L5.67452 9.33949C6.02199 9.715 6.59685 9.76768 7.00679 9.46159L17 2"
+                            stroke="black"
+                            strokeWidth="3"
+                            strokeLinecap="round"
+                          />
+                        </svg>
+                        Transport (4 ways)
+                      </li>
+                      <li className="flex items-center gap-8">
+                        <svg
+                          width="19"
+                          height="12"
+                          viewBox="0 0 19 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2 5.36842L5.67452 9.33949C6.02199 9.715 6.59685 9.76768 7.00679 9.46159L17 2"
+                            stroke="black"
+                            strokeWidth="3"
+                            strokeLinecap="round"
+                          />
+                        </svg>
+                        Makkah Hotel (500m)
+                      </li>
+                      <li className="flex items-center gap-8">
+                        <svg
+                          width="19"
+                          height="12"
+                          viewBox="0 0 19 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2 5.36842L5.67452 9.33949C6.02199 9.715 6.59685 9.76768 7.00679 9.46159L17 2"
+                            stroke="black"
+                            strokeWidth="3"
+                            strokeLinecap="round"
+                          />
+                        </svg>
+                        Madina Hotel (500m)
+                      </li>
+                    </ul>
+                  </div>
+                  <a target="_blank" href="https://wa.me/923446463437">
+                    <button className="buyNowBtn font-Poppins text-xl sm:text-2xl text-white">
+                      Buy Now
+                    </button>
+                  </a>
                 </div>
-                <a target="_blank" href="https://wa.me/923446463437">
-                  <button className="buyNowBtn font-Poppins text-xl sm:text-2xl text-white">
-                    Buy Now
-                  </button>
-                </a>
-              </div>
-              <img
-                className="relative top-[-104%] left-[7%]"
-                src={topRated}
-                alt="svg"
-              />
+                <img
+                  className="absolute top-[-5%] left-[7%]"
+                  src={topRated}
+                  alt="svg"
+                />
+              </AnimationOnScroll>
             </div>
 
             <div className="contentPkg w-[23.563rem] h-[35rem]">
-              <div className="containerChild">
-                <div className="contentContainerChild bg-black flex justify-center rounded-xl h-[13.313rem] items-center">
-                  <h2 className="font-Poppins text-4xl sm:text-[2.625rem] text-white font-medium">
-                    Rs 2,10,000/-
-                  </h2>
+              <AnimationOnScroll
+                animateOnce={true}
+                duration={2}
+                animateIn="animate__fadeInRight"
+              >
+                <div className="containerChild">
+                  <div className="contentContainerChild bg-black flex justify-center rounded-xl h-[13.313rem] items-center">
+                    <h2 className="font-Poppins text-4xl sm:text-[2.625rem] text-white font-medium">
+                      Rs 2,10,000/-
+                    </h2>
+                  </div>
                 </div>
-              </div>
 
-              <div className="containerChild flex justify-center flex-col items-center space-y-12 bg-white h-[21.813rem]">
-                <div className="containerChild font-Poppins text-xs space-y-6">
-                  <p className="pt-8 text-center max-w-[14rem] sm:max-w-[18rem]">
-                    You will get star hotels that are closest to Khana Kaba and
-                    Masjid e Nabvi. Travel around Makkah and Madinah in our
-                    Special Air conditioned Transport
-                  </p>
-                  <ul className="space-y-3">
-                    <li className="flex items-center gap-8">
-                      <svg
-                        width="19"
-                        height="12"
-                        viewBox="0 0 19 12"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M2 5.36842L5.67452 9.33949C6.02199 9.715 6.59685 9.76768 7.00679 9.46159L17 2"
-                          stroke="black"
-                          strokeWidth="3"
-                          strokeLinecap="round"
-                        />
-                      </svg>
-                      Return Air Ticket
-                    </li>
-                    <li className="flex items-center gap-8">
-                      <svg
-                        width="19"
-                        height="12"
-                        viewBox="0 0 19 12"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M2 5.36842L5.67452 9.33949C6.02199 9.715 6.59685 9.76768 7.00679 9.46159L17 2"
-                          stroke="black"
-                          strokeWidth="3"
-                          strokeLinecap="round"
-                        />
-                      </svg>
-                      Umrah Visa
-                    </li>
-                    <li className="flex items-center gap-8">
-                      <svg
-                        width="19"
-                        height="12"
-                        viewBox="0 0 19 12"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M2 5.36842L5.67452 9.33949C6.02199 9.715 6.59685 9.76768 7.00679 9.46159L17 2"
-                          stroke="black"
-                          strokeWidth="3"
-                          strokeLinecap="round"
-                        />
-                      </svg>
-                      Transport (4 ways)
-                    </li>
-                    <li className="flex items-center gap-8">
-                      <svg
-                        width="19"
-                        height="12"
-                        viewBox="0 0 19 12"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M2 5.36842L5.67452 9.33949C6.02199 9.715 6.59685 9.76768 7.00679 9.46159L17 2"
-                          stroke="black"
-                          strokeWidth="3"
-                          strokeLinecap="round"
-                        />
-                      </svg>
-                      Hotel (250m)
-                    </li>
-                  </ul>
+                <div className="containerChild flex justify-center flex-col items-center space-y-12 bg-white h-[21.813rem]">
+                  <div className="containerChild font-Poppins text-xs space-y-6">
+                    <p className="pt-8 text-center max-w-[14rem] sm:max-w-[18rem]">
+                      You will get star hotels that are closest to Khana Kaba
+                      and Masjid e Nabvi. Travel around Makkah and Madinah in
+                      our Special Air conditioned Transport
+                    </p>
+                    <ul className="space-y-3">
+                      <li className="flex items-center gap-8">
+                        <svg
+                          width="19"
+                          height="12"
+                          viewBox="0 0 19 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2 5.36842L5.67452 9.33949C6.02199 9.715 6.59685 9.76768 7.00679 9.46159L17 2"
+                            stroke="black"
+                            strokeWidth="3"
+                            strokeLinecap="round"
+                          />
+                        </svg>
+                        Return Air Ticket
+                      </li>
+                      <li className="flex items-center gap-8">
+                        <svg
+                          width="19"
+                          height="12"
+                          viewBox="0 0 19 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2 5.36842L5.67452 9.33949C6.02199 9.715 6.59685 9.76768 7.00679 9.46159L17 2"
+                            stroke="black"
+                            strokeWidth="3"
+                            strokeLinecap="round"
+                          />
+                        </svg>
+                        Umrah Visa
+                      </li>
+                      <li className="flex items-center gap-8">
+                        <svg
+                          width="19"
+                          height="12"
+                          viewBox="0 0 19 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2 5.36842L5.67452 9.33949C6.02199 9.715 6.59685 9.76768 7.00679 9.46159L17 2"
+                            stroke="black"
+                            strokeWidth="3"
+                            strokeLinecap="round"
+                          />
+                        </svg>
+                        Transport (4 ways)
+                      </li>
+                      <li className="flex items-center gap-8">
+                        <svg
+                          width="19"
+                          height="12"
+                          viewBox="0 0 19 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2 5.36842L5.67452 9.33949C6.02199 9.715 6.59685 9.76768 7.00679 9.46159L17 2"
+                            stroke="black"
+                            strokeWidth="3"
+                            strokeLinecap="round"
+                          />
+                        </svg>
+                        Hotel (250m)
+                      </li>
+                    </ul>
+                  </div>
+                  <a target="_blank" href="https://wa.me/923446463437">
+                    <button className="buyNowBtn font-Poppins text-xl sm:text-2xl text-white">
+                      Buy Now
+                    </button>
+                  </a>
                 </div>
-                <a target="_blank" href="https://wa.me/923446463437">
-                  <button className="buyNowBtn font-Poppins text-xl sm:text-2xl text-white">
-                    Buy Now
-                  </button>
-                </a>
-              </div>
+              </AnimationOnScroll>
             </div>
           </div>
         </div>

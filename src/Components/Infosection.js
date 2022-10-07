@@ -29,7 +29,11 @@ function Infosection(props) {
   return (
     <>
       {/* UMRAH SECTION */}
-      <AnimationOnScroll animateOnce={true} animateIn="animate__fadeInUp">
+      <AnimationOnScroll
+        animateOnce={true}
+        duration={2.2}
+        animateIn="animate__fadeInUp"
+      >
         <div className="umrahContainer max-w-[94.5%] mx-auto flex justify-center mt-[7.875rem]">
           <div className="contentUmrah space-y-5">
             <h2 className="font-Raleway font-semibold text-3xl sm:text-4xl">
