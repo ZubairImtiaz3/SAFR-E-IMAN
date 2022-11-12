@@ -2,6 +2,9 @@ import React from "react";
 import Animatedpage from "./Animatedpage";
 import contactSvg from "../assets/contact.svg";
 
+//SCROLLTOTOP
+import ScrollTop from "react-scrolltop-button";
+
 //import animation
 import "animate.css";
 import { AnimationOnScroll } from "react-animation-on-scroll";
@@ -9,6 +12,15 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 function Contact() {
   return (
     <>
+      <ScrollTop
+        text="^"
+        distance={900}
+        className="scroll-your-role"
+        speed={500}
+        target={10}
+        breakpoint={2560}
+      />
+
       <Animatedpage>
         <div className="illustrationContact max-w-[35%] mx-auto mt-20">
           <img src={contactSvg} alt="svg" />

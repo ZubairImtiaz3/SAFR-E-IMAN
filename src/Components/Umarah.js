@@ -5,9 +5,21 @@ import Animatedpage from "./Animatedpage";
 import "animate.css";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
+//SCROLLTOTOP
+import ScrollTop from "react-scrolltop-button";
+
 function Umarah(props) {
   return (
     <>
+      <ScrollTop
+        text="^"
+        distance={900}
+        className="scroll-your-role"
+        speed={500}
+        target={10}
+        breakpoint={2560}
+      />
+
       <Animatedpage>
         <div className="heroUmarah hidden mt-4 xl:block">
           <div className="leftHeroUmarah bg-black w-[75%] h-[37.25rem] text-white pt-[9.438rem] text-center">

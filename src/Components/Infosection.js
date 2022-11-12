@@ -25,33 +25,82 @@ import fiveStar from "../assets/rating5.png";
 import { Link } from "react-router-dom";
 import Visa from "./Visa";
 
+//SCROLLTOTOP
+import ScrollTop from "react-scrolltop-button";
+
 function Infosection(props) {
   return (
     <>
+      <ScrollTop
+        text="^"
+        distance={900}
+        className="scroll-your-role"
+        speed={500}
+        target={10}
+        breakpoint={2560}
+      />
+
       {/* UMRAH SECTION */}
-      <AnimationOnScroll
-        animateOnce={true}
-        duration={2.2}
-        animateIn="animate__fadeInUp"
-      >
-        <div className="umrahContainer max-w-[94.5%] mx-auto flex justify-center mt-[7.875rem]">
-          <div className="contentUmrah space-y-5">
+      <div className="umrahContainer max-w-[94.5%] mx-auto flex justify-center mt-[7.875rem]">
+        <div className="contentUmrah space-y-5">
+          <AnimationOnScroll
+            animateOnce={true}
+            duration={2}
+            animateIn="animate__fadeIn"
+          >
             <h2 className="font-Raleway font-semibold text-3xl sm:text-4xl">
               Umrah Pakages for you
             </h2>
+          </AnimationOnScroll>
+          <AnimationOnScroll
+            animateOnce={true}
+            duration={1.5}
+            animateIn="animate__fadeInLeft"
+          >
             <img src={lineSvg} alt="line" />
+          </AnimationOnScroll>
+
+          <AnimationOnScroll
+            animateOnce={true}
+            duration={2}
+            delay={1000}
+            animateIn="animate__fadeIn"
+          >
             <p className="font-Poppins text-base max-w-[26.25rem]">
               We provide the best Umarah services from Pakistan. You can choose
               packages according to your needs and budget.
             </p>
-            <div className="flex items-center space-x-2">
+          </AnimationOnScroll>
+          <div className="flex items-center space-x-2">
+            <AnimationOnScroll
+              animateOnce={true}
+              duration={2}
+              delay={1000}
+              animateIn="animate__fadeInUp"
+            >
               <Link onClick={props.linkScroll} to="/umarah">
                 <button className="umrahBtn font-Poppins text-xl sm:text-2xl">
                   Book Now
                 </button>
               </Link>
+            </AnimationOnScroll>
+
+            <AnimationOnScroll
+              animateOnce={true}
+              duration={2}
+              delay={2200}
+              animateIn="animate__fadeIn"
+            >
               <img className=" relative top-3" src={arrow} alt="arrowsvg" />
-            </div>
+            </AnimationOnScroll>
+          </div>
+
+          <AnimationOnScroll
+            animateOnce={true}
+            duration={2}
+            delay={1500}
+            animateIn="animate__fadeIn"
+          >
             <div className="umrahimg flex items-center pt-3 space-x-5">
               <img className="umrahimg1" src={umrah1} alt="pic" />
               <img
@@ -60,14 +109,22 @@ function Infosection(props) {
                 alt="pic"
               />
             </div>
-          </div>
+          </AnimationOnScroll>
+        </div>
+        <AnimationOnScroll
+          animateOnce={true}
+          duration={2}
+          delay={1500}
+          animateIn="animate__fadeInRight"
+        >
           <img
             className="-translate-x-8 hidden xl:block"
             src={umrah3}
             alt="pic"
           />
-        </div>
-      </AnimationOnScroll>
+        </AnimationOnScroll>
+      </div>
+
       {/* VISAS SECTION */}
 
       <Visa />
@@ -75,7 +132,11 @@ function Infosection(props) {
       {/* WHY US SECTION */}
 
       <div className="whyUsContainer h-auto xl:h-[34.75rem] ml-5 sm:ml-10">
-        <AnimationOnScroll animateOnce={true} animateIn="animate__fadeInLeft">
+        <AnimationOnScroll
+          animateOnce={true}
+          duration={2}
+          animateIn="animate__fadeIn"
+        >
           <div className="contentWhyus pt-12 space-y-2 sm:space-y-1">
             <h2 className="font-Raleway text-3xl sm:text-[2.5rem] font-bold text-center">
               Why Book with
@@ -85,12 +146,14 @@ function Infosection(props) {
             </h2>
           </div>
         </AnimationOnScroll>
-        <AnimationOnScroll
-          animateOnce={true}
-          delay={650}
-          animateIn="animate__fadeInUp"
-        >
-          <div className="cardsContainerWhyUS flex space-x-8 justify-center flex-wrap">
+
+        <div className="cardsContainerWhyUS flex space-x-8 justify-center flex-wrap">
+          <AnimationOnScroll
+            animateOnce={true}
+            duration={2}
+            delay={500}
+            animateIn="animate__fadeInUp"
+          >
             <div className="cardWhyUs space-y-[0.625rem] relative left-[4.8%] sm:static">
               <img src={whyvector1} alt="vector" />
               <h3 className="font-Poppins text-2xl font-semibold">
@@ -101,6 +164,14 @@ function Infosection(props) {
                 Department of Pakistan
               </p>
             </div>
+          </AnimationOnScroll>
+
+          <AnimationOnScroll
+            animateOnce={true}
+            duration={2}
+            delay={1100}
+            animateIn="animate__fadeInUp"
+          >
             <div className="cardWhyUs space-y-[0.625rem]">
               <img src={whyvector2} alt="vector" />
               <h3 className="font-Poppins text-2xl font-semibold">
@@ -111,6 +182,14 @@ function Infosection(props) {
                 making a call
               </p>
             </div>
+          </AnimationOnScroll>
+
+          <AnimationOnScroll
+            animateOnce={true}
+            duration={2}
+            delay={1300}
+            animateIn="animate__fadeInUp"
+          >
             <div className="cardWhyUs space-y-[0.625rem]">
               <img src={whyvector3} alt="vector" />
               <h3 className="font-Poppins text-2xl font-semibold">
@@ -121,6 +200,14 @@ function Infosection(props) {
                 Airline Tickets and much more.
               </p>
             </div>
+          </AnimationOnScroll>
+
+          <AnimationOnScroll
+            animateOnce={true}
+            duration={2}
+            delay={1500}
+            animateIn="animate__fadeInUp"
+          >
             <div className="cardWhyUs space-y-[0.625rem] mb-12 xl:mb-0">
               <img src={whyvector4} alt="vector" />
               <h3 className="font-Poppins text-2xl font-semibold">
@@ -131,17 +218,33 @@ function Infosection(props) {
                 week.
               </p>
             </div>
-          </div>
-        </AnimationOnScroll>
+          </AnimationOnScroll>
+        </div>
       </div>
 
       {/* ReviewsSecions */}
-      <h3 className="font-Raleway font-bold text-3xl mt-[8.125rem] sm:text-[2.5rem] text-center sm:ml-[3.25rem] sm:text-left mb-8">
-        Reviews
-      </h3>
-      <div className="lineReview"></div>
       <AnimationOnScroll
-        delay={90}
+        duration={2}
+        animateOnce={true}
+        animateIn="animate__fadeIn"
+      >
+        <h3 className="font-Raleway font-bold text-3xl mt-[8.125rem] sm:text-[2.5rem] text-center sm:ml-[3.25rem] sm:text-left mb-8">
+          Reviews
+        </h3>
+      </AnimationOnScroll>
+
+      <AnimationOnScroll
+        delay={500}
+        duration={2}
+        animateOnce={true}
+        animateIn="animate__fadeIn"
+      >
+        <div className="lineReview"></div>
+      </AnimationOnScroll>
+
+      <AnimationOnScroll
+        delay={700}
+        duration={2}
         animateOnce={true}
         animateIn="animate__fadeIn"
       >
@@ -282,51 +385,63 @@ function Infosection(props) {
       </AnimationOnScroll>
 
       {/* BANKDETAILSECTION */}
+      <AnimationOnScroll
+        duration={2}
+        animateOnce={true}
+        animateIn="animate__fadeIn"
+      >
+        <h2 className="font-Poppins font-bold text-3xl sm:text-[2.5rem] text-center sm:text-left pl-[4.5%] mt-[9.75rem]">
+          Our Bank Accounts
+        </h2>
+      </AnimationOnScroll>
 
-      <h2 className="font-Poppins font-bold text-3xl sm:text-[2.5rem] text-center sm:text-left pl-[4.5%] mt-[9.75rem]">
-        Our Bank Accounts
-      </h2>
-
-      <div className="bankdetailContainer flex justify-center pt-10 mb-[11.25rem]">
-        <div className="tableBank overflow-auto xsm:overflow-hidden">
-          <table>
-            <thead>
-              <tr className="font-Poppins font-semibold text-base sm:text-xl">
-                <th>Bank Name</th>
-                <th>Account Number</th>
-                <th>Branch Number</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody className="font-poppins text-base sm:text-xl bg-black text-white">
-              <tr>
-                <td>HBL - HABIB BANK LTD</td>
-                <td>PK66-HABB-0008527901124003</td>
-                <td> &nbsp; &nbsp;0852</td>
-                <td>JazzCash Microfinance Bank</td>
-              </tr>
-              <tr>
-                <td>NBP - NATIONAL BANK PAKISTAN</td>
-                <td>PK38-NBPA-2306004173552657</td>
-                <td> &nbsp; &nbsp;2306</td>
-                <td>HBL - HABIB BABK PVT LTD</td>
-              </tr>
-              <tr>
-                <td>TELENOR MICROFINANCE BANK</td>
-                <td>+923-446463437</td>
-                <td>E-Wallet</td>
-                <td>Easypaisa</td>
-              </tr>
-              <tr>
-                <td>JAZZ MICROFINANCE BANK</td>
-                <td>+923-446463437</td>
-                <td>E-Wallet</td>
-                <td>JazzCash</td>
-              </tr>
-            </tbody>
-          </table>
+      <AnimationOnScroll
+        duration={2}
+        delay={300}
+        animateOnce={true}
+        animateIn="animate__fadeIn"
+      >
+        <div className="bankdetailContainer flex justify-center pt-10 mb-[11.25rem]">
+          <div className="tableBank overflow-auto xsm:overflow-hidden">
+            <table>
+              <thead>
+                <tr className="font-Poppins font-semibold text-base sm:text-xl">
+                  <th>Bank Name</th>
+                  <th>Account Number</th>
+                  <th>Branch Number</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody className="font-poppins text-base sm:text-xl bg-black text-white">
+                <tr>
+                  <td>HBL - HABIB BANK LTD</td>
+                  <td>PK66-HABB-0008527901124003</td>
+                  <td> &nbsp; &nbsp;0852</td>
+                  <td>JazzCash Microfinance Bank</td>
+                </tr>
+                <tr>
+                  <td>NBP - NATIONAL BANK PAKISTAN</td>
+                  <td>PK38-NBPA-2306004173552657</td>
+                  <td> &nbsp; &nbsp;2306</td>
+                  <td>HBL - HABIB BABK PVT LTD</td>
+                </tr>
+                <tr>
+                  <td>TELENOR MICROFINANCE BANK</td>
+                  <td>+923-446463437</td>
+                  <td>E-Wallet</td>
+                  <td>Easypaisa</td>
+                </tr>
+                <tr>
+                  <td>JAZZ MICROFINANCE BANK</td>
+                  <td>+923-446463437</td>
+                  <td>E-Wallet</td>
+                  <td>JazzCash</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-      </div>
+      </AnimationOnScroll>
     </>
   );
 }

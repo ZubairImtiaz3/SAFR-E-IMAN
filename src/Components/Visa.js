@@ -3,53 +3,30 @@ import saudia from "../assets/saudia.jpg";
 import dubai from "../assets/dubai.jpg";
 import behrain from "../assets/behrain.jpg";
 
-import { useInView } from "react-intersection-observer";
-
-import { useEffect } from "react";
-
-import { motion } from "framer-motion";
-import { useAnimation } from "framer-motion";
+//import animation
+import "animate.css";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 function Visa(props) {
-  const { ref, inView } = useInView();
-  const useAnimationOnDiv = useAnimation();
-
-  useEffect(() => {
-    if (inView) {
-      useAnimationOnDiv.start({
-        x: 0,
-        transition: {
-          type: "string",
-          duration: 1,
-          bounce: 0.3,
-        },
-      });
-    }
-    if (window.innerWidth > 720 && !inView) {
-      useAnimationOnDiv.start({
-        x: "100vw",
-      });
-    }
-    if (window.innerWidth < 720 && !inView) {
-      useAnimationOnDiv.start({
-        x: "0",
-      });
-    }
-  }, [inView]);
-
   return (
     <>
-      <div ref={ref}>
-        {/* VISAS SECTION */}
+      {/* VISAS SECTION */}
 
-        <motion.div
-          id="visa"
-          className="visaContainer flex flex-col justify-center items-center mt-48"
-          animate={useAnimationOnDiv}
-        >
+      <div
+        id="visa"
+        className="visaContainer flex flex-col justify-center items-center mt-48"
+      >
+        <AnimationOnScroll duration={2} animateIn="animate__fadeIn">
           <h2 className="font-Raleway font-bold text-3xl sm:text-[2.5rem] text-center">
             Popular places we provide Visas
           </h2>
+        </AnimationOnScroll>
+
+        <AnimationOnScroll
+          duration={2}
+          delay={300}
+          animateIn="animate__fadeInRight"
+        >
           <div className="visaCardContainer pt-[5.438rem] flex flex-wrap justify-center gap-12 sm:gap-16 mb-32">
             <a target="_blank" href="https://wa.me/923446463437">
               <div className="visaCard">
@@ -105,7 +82,7 @@ function Visa(props) {
               </div>
             </a>
           </div>
-        </motion.div>
+        </AnimationOnScroll>
       </div>
     </>
   );
