@@ -34,7 +34,7 @@ function Infosection(props) {
       <ScrollTop
         text="^"
         distance={900}
-        className="scroll-your-role"
+        className="react-scrolltop-button"
         speed={500}
         target={10}
         breakpoint={2560}
