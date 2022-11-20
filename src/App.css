@@ -303,15 +303,15 @@ footer {
 
 @media screen and (max-width: 550px) {
   .react-scrolltop-button {
-    width: 2.3rem;
-    height: 2.3rem;
-    right: 2.4% !important;
-    bottom: 2.5% !important;
+    width: 2.5rem;
+    height: 2.5rem;
+    right: 4.8% !important;
+    bottom: 2.8% !important;
   }
   .react-scrolltop-button svg {
     font-size: 1.5rem !important;
     position: relative;
-    top: -6px;
-    left: -5.75px;
+    top: -4px;
+    left: -4.85px;
   }
 }
