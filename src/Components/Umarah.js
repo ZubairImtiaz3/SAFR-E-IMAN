@@ -16,7 +16,7 @@ function Umarah(props) {
         distance={900}
         className="scroll-your-role"
         speed={500}
-        target={10}
+        target={0}
         breakpoint={2560}
       />
 
@@ -45,15 +45,20 @@ function Umarah(props) {
         </div>
 
         <div className="containerUmarahPkg">
-          <h2 className="text-center font-Raleway font-bold text-5xl sm:text-7xl pt-28">
-            Pricing
-          </h2>
+          <AnimationOnScroll
+            delay={100}
+            animateOnce={true}
+            animateIn="animate__fadeIn"
+          >
+            <h2 className="text-center font-Raleway font-bold text-5xl sm:text-7xl pt-28">
+              Pricing
+            </h2>
+          </AnimationOnScroll>
 
           <div className="containerPkg max-w-[94.5%] mx-auto flex items-center flex-wrap gap-32 xl:gap-0 justify-center pb-10 pt-20">
             <div className="contentPkg w-[23.563rem] h-[35rem]">
               <AnimationOnScroll
                 animateOnce={true}
-                duration={2}
                 animateIn="animate__fadeInLeft"
               >
                 <div className="containerChild">
@@ -157,7 +162,6 @@ function Umarah(props) {
             <div className="contentPkg w-[23.563rem] h-[35rem] xl:w-[25.563rem] xl:h-[41.063rem]">
               <AnimationOnScroll
                 animateOnce={true}
-                duration={1}
                 animateIn="animate__fadeInUp"
               >
                 <div className="containerChild">
@@ -280,7 +284,6 @@ function Umarah(props) {
             <div className="contentPkg w-[23.563rem] h-[35rem]">
               <AnimationOnScroll
                 animateOnce={true}
-                duration={2}
                 animateIn="animate__fadeInRight"
               >
                 <div className="containerChild">

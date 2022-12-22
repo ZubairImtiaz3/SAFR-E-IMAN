@@ -8,11 +8,7 @@ const Iframe = `<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!
 function iframe(props) {
   return (
     <div className="map-responsive">
-      <AnimationOnScroll
-        animateOnce={true}
-        duration={3}
-        animateIn="animate__fadeIn"
-      >
+      <AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn">
         <div dangerouslySetInnerHTML={{ __html: Iframe }} />
       </AnimationOnScroll>
     </div>

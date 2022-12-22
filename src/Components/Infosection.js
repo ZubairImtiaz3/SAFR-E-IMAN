@@ -36,7 +36,7 @@ function Infosection(props) {
         distance={900}
         className="react-scrolltop-button"
         speed={500}
-        target={10}
+        target={0}
         breakpoint={2560}
       />
 
@@ -45,7 +45,7 @@ function Infosection(props) {
         <div className="contentUmrah space-y-5">
           <AnimationOnScroll
             animateOnce={true}
-            duration={2}
+            duration={0.5}
             animateIn="animate__fadeIn"
           >
             <h2 className="font-Raleway font-semibold text-3xl sm:text-4xl">
@@ -54,7 +54,7 @@ function Infosection(props) {
           </AnimationOnScroll>
           <AnimationOnScroll
             animateOnce={true}
-            duration={1.5}
+            duration={0.8}
             animateIn="animate__fadeInLeft"
           >
             <img src={lineSvg} alt="line" />
@@ -62,8 +62,7 @@ function Infosection(props) {
 
           <AnimationOnScroll
             animateOnce={true}
-            duration={2}
-            delay={1000}
+            delay={400}
             animateIn="animate__fadeIn"
           >
             <p className="font-Poppins text-base max-w-[26.25rem]">
@@ -74,8 +73,7 @@ function Infosection(props) {
           <div className="flex items-center space-x-2">
             <AnimationOnScroll
               animateOnce={true}
-              duration={2}
-              delay={1000}
+              delay={600}
               animateIn="animate__fadeInUp"
             >
               <Link onClick={props.linkScroll} to="/umarah">
@@ -87,8 +85,7 @@ function Infosection(props) {
 
             <AnimationOnScroll
               animateOnce={true}
-              duration={2}
-              delay={2200}
+              delay={700}
               animateIn="animate__fadeIn"
             >
               <img className=" relative top-3" src={arrow} alt="arrowsvg" />
@@ -97,8 +94,7 @@ function Infosection(props) {
 
           <AnimationOnScroll
             animateOnce={true}
-            duration={2}
-            delay={1500}
+            delay={900}
             animateIn="animate__fadeIn"
           >
             <div className="umrahimg flex items-center pt-3 space-x-5">
@@ -113,8 +109,7 @@ function Infosection(props) {
         </div>
         <AnimationOnScroll
           animateOnce={true}
-          duration={2}
-          delay={1500}
+          delay={1100}
           animateIn="animate__fadeInRight"
         >
           <img
@@ -132,11 +127,7 @@ function Infosection(props) {
       {/* WHY US SECTION */}
 
       <div className="whyUsContainer h-auto xl:h-[34.75rem] ml-5 sm:ml-10">
-        <AnimationOnScroll
-          animateOnce={true}
-          duration={2}
-          animateIn="animate__fadeIn"
-        >
+        <AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn">
           <div className="contentWhyus pt-12 space-y-2 sm:space-y-1">
             <h2 className="font-Raleway text-3xl sm:text-[2.5rem] font-bold text-center">
               Why Book with
@@ -150,8 +141,7 @@ function Infosection(props) {
         <div className="cardsContainerWhyUS flex space-x-8 justify-center flex-wrap">
           <AnimationOnScroll
             animateOnce={true}
-            duration={2}
-            delay={500}
+            delay={300}
             animateIn="animate__fadeInUp"
           >
             <div className="cardWhyUs space-y-[0.625rem] relative left-[4.8%] sm:static">
@@ -168,8 +158,7 @@ function Infosection(props) {
 
           <AnimationOnScroll
             animateOnce={true}
-            duration={2}
-            delay={1100}
+            delay={500}
             animateIn="animate__fadeInUp"
           >
             <div className="cardWhyUs space-y-[0.625rem]">
@@ -186,8 +175,7 @@ function Infosection(props) {
 
           <AnimationOnScroll
             animateOnce={true}
-            duration={2}
-            delay={1300}
+            delay={700}
             animateIn="animate__fadeInUp"
           >
             <div className="cardWhyUs space-y-[0.625rem]">
@@ -204,8 +192,7 @@ function Infosection(props) {
 
           <AnimationOnScroll
             animateOnce={true}
-            duration={2}
-            delay={1500}
+            delay={900}
             animateIn="animate__fadeInUp"
           >
             <div className="cardWhyUs space-y-[0.625rem] mb-12 xl:mb-0">
@@ -223,11 +210,7 @@ function Infosection(props) {
       </div>
 
       {/* ReviewsSecions */}
-      <AnimationOnScroll
-        duration={2}
-        animateOnce={true}
-        animateIn="animate__fadeIn"
-      >
+      <AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn">
         <h3 className="font-Raleway font-bold text-3xl mt-[8.125rem] sm:text-[2.5rem] text-center sm:ml-[3.25rem] sm:text-left mb-8">
           Reviews
         </h3>
@@ -235,7 +218,6 @@ function Infosection(props) {
 
       <AnimationOnScroll
         delay={500}
-        duration={2}
         animateOnce={true}
         animateIn="animate__fadeIn"
       >
@@ -244,7 +226,6 @@ function Infosection(props) {
 
       <AnimationOnScroll
         delay={700}
-        duration={2}
         animateOnce={true}
         animateIn="animate__fadeIn"
       >
@@ -385,18 +366,13 @@ function Infosection(props) {
       </AnimationOnScroll>
 
       {/* BANKDETAILSECTION */}
-      <AnimationOnScroll
-        duration={2}
-        animateOnce={true}
-        animateIn="animate__fadeIn"
-      >
+      <AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn">
         <h2 className="font-Poppins font-bold text-3xl sm:text-[2.5rem] text-center sm:text-left pl-[4.5%] mt-[9.75rem]">
           Our Bank Accounts
         </h2>
       </AnimationOnScroll>
 
       <AnimationOnScroll
-        duration={2}
         delay={300}
         animateOnce={true}
         animateIn="animate__fadeIn"

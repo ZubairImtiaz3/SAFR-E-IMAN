@@ -17,7 +17,7 @@ function Contact() {
         distance={900}
         className="scroll-your-role"
         speed={500}
-        target={10}
+        target={0}
         breakpoint={2560}
       />
 
@@ -25,11 +25,7 @@ function Contact() {
         <div className="illustrationContact max-w-[35%] mx-auto mt-20">
           <img src={contactSvg} alt="svg" />
         </div>
-        <AnimationOnScroll
-          animateOnce={true}
-          duration={2}
-          animateIn="animate__fadeInUp"
-        >
+        <AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn">
           <section className="contact w-full max-w-3xl px-6 py-4 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800 mt-20">
             <h2 className="text-3xl font-Raleway font-semibold text-center text-gray-800 dark:text-white">
               Get in touch

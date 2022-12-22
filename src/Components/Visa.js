@@ -16,17 +16,13 @@ function Visa(props) {
         id="visa"
         className="visaContainer flex flex-col justify-center items-center mt-48"
       >
-        <AnimationOnScroll duration={2} animateIn="animate__fadeIn">
+        <AnimationOnScroll animateIn="animate__fadeIn">
           <h2 className="font-Raleway font-bold text-3xl sm:text-[2.5rem] text-center">
             Popular places we provide Visas
           </h2>
         </AnimationOnScroll>
 
-        <AnimationOnScroll
-          duration={2}
-          delay={300}
-          animateIn="animate__fadeInRight"
-        >
+        <AnimationOnScroll delay={300} animateIn="animate__fadeInRight">
           <div className="visaCardContainer pt-[5.438rem] flex flex-wrap justify-center gap-12 sm:gap-16 mb-32">
             <a target="_blank" href="https://wa.me/923446463437">
               <div className="visaCard">
