@@ -100,6 +100,17 @@ nav {
   height: 37.25rem;
 }
 
+@media screen and (min-width: 1500px) {
+  .heroUmarah {
+    background-position: 100%;
+  }
+}
+@media screen and (min-width: 1790px) {
+  .leftHeroUmarah {
+    width: 80%;
+  }
+}
+
 /* VisasSection */
 
 .visaCard {
