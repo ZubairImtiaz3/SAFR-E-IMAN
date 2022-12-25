@@ -83,7 +83,7 @@ function Navbar(props) {
       <nav
         className={
           navFix
-            ? `sticky h-20 top-0 z-50 w-full ${navStyle}`
+            ? `fixed h-20 top-0 z-50 w-full ${navStyle}`
             : `h-28 ${navStyle}`
         }
       >
