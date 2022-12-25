@@ -319,3 +319,16 @@ footer {
     padding: 10px !important;
   }
 }
+
+/* ScrollBar */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #efbd69;
+}
