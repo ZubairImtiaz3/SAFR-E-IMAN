@@ -66,7 +66,7 @@ function Navbar(props) {
   const [navFix, setnavFix] = useState(false);
 
   const navCheckToFix = () => {
-    if (window.scrollY >= 50) {
+    if (window.scrollY > 50) {
       setnavFix(true);
     } else {
       setnavFix(false);
