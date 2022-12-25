@@ -19,9 +19,14 @@ function Navbar(props) {
     const hideHam = () => {
       setOpen(false);
     };
+
+    const scrollTopSmaller = () => {
+      hideHam();
+      props.linkScroll();
+    };
     return (
       <div className="p-2">
-        <Link onClick={hideHam} to={href} className={style.item}>
+        <Link onClick={scrollTopSmaller} to={href} className={style.item}>
           {children}
         </Link>
       </div>
@@ -45,7 +50,7 @@ function Navbar(props) {
         <Link1
           spy={true}
           smooth={true}
-          offset={-40}
+          offset={-125}
           duration={1200}
           onClick={hideHam}
           to={href}
@@ -57,9 +62,31 @@ function Navbar(props) {
     );
   }
 
+  //StickyNavbar
+  const [navFix, setnavFix] = useState(false);
+
+  const navCheckToFix = () => {
+    if (window.scrollY >= 50) {
+      setnavFix(true);
+    } else {
+      setnavFix(false);
+    }
+  };
+
+  window.addEventListener("scroll", navCheckToFix);
+
+  const navStyle =
+    "bg-black flex items-center justify-between pl-4 sm:pl-[5.438rem] xl:pr-[12.5rem]";
+
   return (
     <>
-      <nav className="bg-black h-28 flex items-center justify-between pl-4 sm:pl-[5.438rem] xl:pr-[12.5rem]">
+      <nav
+        className={
+          navFix
+            ? `sticky h-20 top-0 z-50 w-full ${navStyle}`
+            : `h-28 ${navStyle}`
+        }
+      >
         <Link to="/">
           <img src={logo} alt="" />
         </Link>
@@ -93,16 +120,20 @@ function Navbar(props) {
 
         <ul className="mainLinks font-Raleway text-white text-base space-x-[3.75rem] hidden xl:flex">
           <li>
-            <Link to="/">Home</Link>
+            <Link onClick={props.linkScroll} to="/">
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/umarah">Umrah</Link>
+            <Link onClick={props.linkScroll} to="/umarah">
+              Umrah
+            </Link>
           </li>
           <li className="cursor-pointer">
             <Link1
               spy={true}
               smooth={true}
-              offset={-40}
+              offset={-125}
               duration={800}
               to="visa"
             >
@@ -110,7 +141,9 @@ function Navbar(props) {
             </Link1>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link onClick={props.linkScroll} to="/contact">
+              Contact
+            </Link>
           </li>
           <li className="cursor-pointer">
             <Link1 spy={true} smooth={true} duration={1600} to="footer">

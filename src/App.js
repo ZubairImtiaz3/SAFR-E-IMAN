@@ -49,7 +49,7 @@ function App() {
         ) : (
           <Router>
             <Infobar />
-            <Navbar />
+            <Navbar linkScroll={linkScroll} />
             <Routes>
               <Route
                 exact

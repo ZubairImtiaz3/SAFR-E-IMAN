@@ -97,7 +97,7 @@ function Footer(props) {
                   <Link1
                     spy={true}
                     smooth={true}
-                    offset={-40}
+                    offset={-115}
                     duration={800}
                     to="visa"
                   >
