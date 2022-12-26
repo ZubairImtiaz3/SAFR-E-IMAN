@@ -66,7 +66,7 @@ function Navbar(props) {
   const [navFix, setnavFix] = useState(false);
 
   const navCheckToFix = () => {
-    if (window.scrollY > 50) {
+    if (window.scrollY >= 50) {
       setnavFix(true);
     } else {
       setnavFix(false);
@@ -78,8 +78,11 @@ function Navbar(props) {
   const navStyle =
     "bg-black flex items-center justify-between pl-4 sm:pl-[5.438rem] xl:pr-[12.5rem]";
 
+  const spacerNavFix = <div className="h-[90px]"></div>;
+
   return (
     <>
+      {navFix ? spacerNavFix : false}
       <nav
         className={
           navFix
