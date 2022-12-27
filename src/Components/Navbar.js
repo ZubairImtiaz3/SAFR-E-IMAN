@@ -82,7 +82,7 @@ function Navbar(props) {
 
   return (
     <>
-      {navFix ? spacerNavFix : false}
+      {navFix && spacerNavFix}
       <nav
         className={
           navFix
