@@ -1,9 +1,3 @@
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-// import required modules
-import { Autoplay } from "swiper";
-// Import Swiper styles
-import "swiper/css";
 //import animation
 import "animate.css";
 import { AnimationOnScroll } from "react-animation-on-scroll";
@@ -13,26 +7,19 @@ import arrow from "../assets/arrow.svg";
 import umrah1 from "../assets/umrah1.jpg";
 import umrah2 from "../assets/umrah2.jpg";
 import umrah3 from "../assets/umrahmain.jpg";
-import review1 from "../assets/review1.jpg";
-import review2 from "../assets/review2.jpg";
-import whyvector1 from "../assets/whyvector1.svg";
-import whyvector2 from "../assets/whyvector2.svg";
-import whyvector3 from "../assets/whyvector3.svg";
-import whyvector4 from "../assets/whyvector4.svg";
-import fourStar from "../assets/rating4.jpg";
-import fiveStar from "../assets/rating5.png";
 
 import { Link } from "react-router-dom";
 import Visa from "./Visa";
+import WhyUs from "./WhyUs";
 
 //SCROLLTOTOP
 import ScrollTop from "react-scrolltop-button";
+import Reviews from "./Reviews";
 
 function Infosection(props) {
   return (
     <>
       <ScrollTop
-        text="^"
         distance={900}
         className="react-scrolltop-button"
         speed={500}
@@ -121,249 +108,13 @@ function Infosection(props) {
       </div>
 
       {/* VISAS SECTION */}
-
       <Visa />
 
       {/* WHY US SECTION */}
-
-      <div className="whyUsContainer h-auto xl:h-[34.75rem] ml-5 sm:ml-10">
-        <AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn">
-          <div className="contentWhyus pt-12 space-y-2 sm:space-y-1">
-            <h2 className="font-Raleway text-3xl sm:text-[2.5rem] font-bold text-center">
-              Why Book with
-            </h2>
-            <h2 className="font-Raleway text-3xl sm:text-[2.5rem] font-bold text-[#5E5E5E] text-center">
-              Safina Al Madina Travels?
-            </h2>
-          </div>
-        </AnimationOnScroll>
-
-        <div className="cardsContainerWhyUS flex space-x-8 justify-center flex-wrap">
-          <AnimationOnScroll
-            animateOnce={true}
-            delay={300}
-            animateIn="animate__fadeInUp"
-          >
-            <div className="cardWhyUs space-y-[0.625rem] relative left-[4.8%] sm:static">
-              <img src={whyvector1} alt="vector" />
-              <h3 className="font-Poppins text-2xl font-semibold">
-                Trust Worthy
-              </h3>
-              <p className="font-Poppins text-xs w-48">
-                We are Register and Authorized from Travel and Tourism
-                Department of Pakistan
-              </p>
-            </div>
-          </AnimationOnScroll>
-
-          <AnimationOnScroll
-            animateOnce={true}
-            delay={500}
-            animateIn="animate__fadeInUp"
-          >
-            <div className="cardWhyUs space-y-[0.625rem]">
-              <img src={whyvector2} alt="vector" />
-              <h3 className="font-Poppins text-2xl font-semibold">
-                Easy to Book
-              </h3>
-              <p className="font-Poppins text-xs w-48">
-                You can send your queries on Whatsapp, Email or get in touch by
-                making a call
-              </p>
-            </div>
-          </AnimationOnScroll>
-
-          <AnimationOnScroll
-            animateOnce={true}
-            delay={700}
-            animateIn="animate__fadeInUp"
-          >
-            <div className="cardWhyUs space-y-[0.625rem]">
-              <img src={whyvector3} alt="vector" />
-              <h3 className="font-Poppins text-2xl font-semibold">
-                Best Price
-              </h3>
-              <p className="font-Poppins text-xs w-48">
-                We Gurantte you the best price in the Market, Discount on
-                Airline Tickets and much more.
-              </p>
-            </div>
-          </AnimationOnScroll>
-
-          <AnimationOnScroll
-            animateOnce={true}
-            delay={900}
-            animateIn="animate__fadeInUp"
-          >
-            <div className="cardWhyUs space-y-[0.625rem] mb-12 xl:mb-0">
-              <img src={whyvector4} alt="vector" />
-              <h3 className="font-Poppins text-2xl font-semibold">
-                Customer Services
-              </h3>
-              <p className="font-Poppins text-xs w-48">
-                Our team is Available 24/7. You can Get in touch at any day in
-                week.
-              </p>
-            </div>
-          </AnimationOnScroll>
-        </div>
-      </div>
+      <WhyUs />
 
       {/* ReviewsSecions */}
-      <AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn">
-        <h3 className="font-Raleway font-bold text-3xl mt-[8.125rem] sm:text-[2.5rem] text-center sm:ml-[3.25rem] sm:text-left mb-8">
-          Reviews
-        </h3>
-      </AnimationOnScroll>
-
-      <AnimationOnScroll
-        delay={500}
-        animateOnce={true}
-        animateIn="animate__fadeIn"
-      >
-        <div className="lineReview"></div>
-      </AnimationOnScroll>
-
-      <AnimationOnScroll
-        delay={700}
-        animateOnce={true}
-        animateIn="animate__fadeIn"
-      >
-        <Swiper
-          slidesPerView={3}
-          spaceBetween={36}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
-          breakpoints={{
-            290: {
-              slidesPerView: 1,
-              spaceBetween: 0,
-              spaceBetween: 110,
-            },
-            1024: {
-              slidesPerView: 2,
-              spaceBetween: 36,
-            },
-            1280: {
-              slidesPerView: 3,
-              spaceBetween: 36,
-            },
-          }}
-          modules={[Autoplay]}
-          className="mySwiper"
-        >
-          <SwiperSlide>
-            <div className="reviewContainer w-[26.125rem] h-[12.875rem] flex justify-center items-center flex-col">
-              <div className="reviewContent space-y-[0.688rem]">
-                <div className="flex items-center space-x-3">
-                  <img src={review1} alt="clientImg" />
-                  <img src={fourStar} alt="rating" />
-                </div>
-                <h3 className="font-Raleway font-bold text-2xl">
-                  Abdul Ghaffar
-                </h3>
-                <p className="font-Poppins text-xs w-[24.063rem]">
-                  Fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-                  tellus elit sed risus ringilla accumsan, risus sem
-                  sollicitudin lacus, ut interdum tellus elit sed risus.{" "}
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="reviewContainer w-[26.125rem] h-[12.875rem] flex justify-center items-center flex-col">
-              <div className="reviewContent space-y-[0.688rem]">
-                <div className="flex items-center space-x-3">
-                  <img src={review2} alt="clientImg" />
-                  <img src={fiveStar} alt="rating" />
-                </div>
-                <h3 className="font-Raleway font-bold text-2xl">
-                  Syed Khizer Abbas
-                </h3>
-                <p className="font-Poppins text-xs w-[24.063rem]">
-                  Fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-                  tellus elit sed risus ringilla accumsan, risus sem
-                  sollicitudin lacus, ut interdum tellus elit sed risus.{" "}
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="reviewContainer w-[26.125rem] h-[12.875rem] flex justify-center items-center flex-col">
-              <div className="reviewContent space-y-[0.688rem]">
-                <div className="flex items-center space-x-3">
-                  <img src={review1} alt="clientImg" />
-                  <img src={fiveStar} alt="rating" />
-                </div>
-                <h3 className="font-Raleway font-bold text-2xl">Rehan Rana</h3>
-                <p className="font-Poppins text-xs w-[24.063rem]">
-                  Fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-                  tellus elit sed risus ringilla accumsan, risus sem
-                  sollicitudin lacus, ut interdum tellus elit sed risus.{" "}
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="reviewContainer w-[26.125rem] h-[12.875rem] flex justify-center items-center flex-col">
-              <div className="reviewContent space-y-[0.688rem]">
-                <div className="flex items-center space-x-3">
-                  <img src={review2} alt="clientImg" />
-                  <img src={fourStar} alt="rating" />
-                </div>
-                <h3 className="font-Raleway font-bold text-2xl">
-                  Aqsa Mehmood
-                </h3>
-                <p className="font-Poppins text-xs w-[24.063rem]">
-                  Fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-                  tellus elit sed risus ringilla accumsan, risus sem
-                  sollicitudin lacus, ut interdum tellus elit sed risus.{" "}
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="reviewContainer w-[26.125rem] h-[12.875rem] flex justify-center items-center flex-col">
-              <div className="reviewContent space-y-[0.688rem]">
-                <div className="flex items-center space-x-3">
-                  <img src={review1} alt="clientImg" />
-                  <img src={fourStar} alt="rating" />
-                </div>
-                <h3 className="font-Raleway font-bold text-2xl">
-                  Rasheed Nonar
-                </h3>
-                <p className="font-Poppins text-xs w-[24.063rem]">
-                  Fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-                  tellus elit sed risus ringilla accumsan, risus sem
-                  sollicitudin lacus, ut interdum tellus elit sed risus.{" "}
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="reviewContainer w-[26.125rem] h-[12.875rem] flex justify-center items-center flex-col">
-              <div className="reviewContent space-y-[0.688rem]">
-                <div className="flex items-center space-x-3">
-                  <img src={review1} alt="clientImg" />
-                  <img src={fiveStar} alt="rating" />
-                </div>
-                <h3 className="font-Raleway font-bold text-2xl">Waheed Ali</h3>
-                <p className="font-Poppins text-xs w-[24.063rem]">
-                  Fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-                  tellus elit sed risus ringilla accumsan, risus sem
-                  sollicitudin lacus, ut interdum tellus elit sed risus.{" "}
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-        </Swiper>
-      </AnimationOnScroll>
+      <Reviews />
 
       {/* BANKDETAILSECTION */}
       <AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn">
