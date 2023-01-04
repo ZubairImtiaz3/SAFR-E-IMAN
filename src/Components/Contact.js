@@ -99,20 +99,20 @@ function Contact() {
 
         <AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn">
           <section
-            className={`contact ${hideForm} w-full max-w-3xl px-6 py-4 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800 mt-20`}
+            className={`contact ${hideForm} w-full max-w-3xl px-6 py-4 mx-auto bg-white rounded-md shadow-md mt-20`}
           >
-            <h2 className="text-3xl font-Raleway font-semibold text-center text-gray-800 dark:text-white">
+            <h2 className="text-3xl font-Raleway font-semibold text-center text-gray-800">
               Get in touch
             </h2>
 
-            <p className="mt-3 font-Poppins text-center text-gray-600 dark:text-gray-400">
+            <p className="mt-3 font-Poppins text-center text-gray-600">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             </p>
 
             <div className="font-Poppins grid grid-cols-1 gap-6 mt-6 sm:grid-cols-2 md:grid-cols-3">
               <a
                 href="https://goo.gl/maps/tTEhxaUZiVWLvC9N7"
-                className="flex flex-col items-center px-4 py-3 text-gray-700 transition-colors duration-300 transform rounded-md dark:text-gray-200 hover:bg-blue-200 dark:hover:bg-blue-500"
+                className="flex flex-col items-center px-4 py-3 text-gray-700 transition-colors duration-300 transform rounded-md  hover:bg-blue-200"
               >
                 <svg
                   className="w-5 h-5"
@@ -132,7 +132,7 @@ function Contact() {
 
               <a
                 href="https://wa.me/923446463437"
-                className="flex flex-col items-center px-4 py-3 text-gray-700 transition-colors duration-300 transform rounded-md dark:text-gray-200 hover:bg-blue-200 dark:hover:bg-blue-500"
+                className="flex flex-col items-center px-4 py-3 text-gray-700 transition-colors duration-300 transform rounded-md  hover:bg-blue-200"
               >
                 <svg
                   className="w-5 h-5"
@@ -149,7 +149,7 @@ function Contact() {
               <a
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=safinaalmadina@gmail.com"
                 target="_blank"
-                className="flex flex-col items-center px-4 py-3 text-gray-700 transition-colors duration-300 transform rounded-md dark:text-gray-200 hover:bg-blue-200 dark:hover:bg-blue-500"
+                className="flex flex-col items-center px-4 py-3 text-gray-700 transition-colors duration-300 transform rounded-md  hover:bg-blue-200"
               >
                 <svg
                   className="w-5 h-5"
@@ -169,13 +169,13 @@ function Contact() {
               <form ref={form} onSubmit={sendEmail}>
                 <div className="font-poppins items-center -mx-2 md:flex">
                   <div className="w-full mx-2">
-                    <label className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">
+                    <label className="block mb-2 text-sm font-medium text-gray-600 ">
                       Name
                     </label>
 
                     <input
                       required
-                      className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                      className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
                       type="text"
                       name="from_name"
                       value={name}
@@ -184,13 +184,13 @@ function Contact() {
                   </div>
 
                   <div className="w-full mx-2 mt-4 md:mt-0">
-                    <label className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">
+                    <label className="block mb-2 text-sm font-medium text-gray-600 ">
                       E-mail
                     </label>
 
                     <input
                       required
-                      className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                      className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
                       type="email"
                       name="from_name"
                       value={email}
@@ -200,7 +200,7 @@ function Contact() {
                 </div>
 
                 <div className="w-full mt-4">
-                  <label className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">
+                  <label className="block mb-2 text-sm font-medium text-gray-600 ">
                     Message
                   </label>
 
@@ -209,7 +209,7 @@ function Contact() {
                     onChange={(event) => setMessage(event.target.value)}
                     required
                     name="message"
-                    className="block w-full h-40 px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
+                    className="block w-full h-40 px-4 py-2 text-gray-700 bg-white border rounded-md focus:border-blue-400  focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
                   ></textarea>
                 </div>
 
