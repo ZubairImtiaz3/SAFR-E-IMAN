@@ -21,6 +21,7 @@ function Infobar(props) {
             <a
               href="https://mail.google.com/mail/?view=cm&fs=1&to=safinaalmadina@gmail.com"
               target="_blank"
+              rel="noreferrer"
             >
               <p className="font-Poppins text-base text-white">
                 Safinaalmadina@gmail.com

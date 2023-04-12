@@ -10,18 +10,21 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 function Visa(props) {
   const visaContent = [
     {
+      id: 0,
       image: saudia,
       city: "Saudia Arabia",
       discription:
         "We provide quick Visa processing of saudia from Karachi and Islamabad Embassy.",
     },
     {
+      id: 1,
       image: dubai,
       city: "Dubai",
       discription:
         "We provide One Month, Three Month and Transit visit Visa of Dubai.",
     },
     {
+      id: 2,
       image: behrain,
       city: "Bahrain",
       discription:
@@ -46,7 +49,7 @@ function Visa(props) {
           <div className="visaCardContainer pt-[5.438rem] flex flex-wrap justify-center gap-12 sm:gap-16 mb-32">
             {visaContent.map((visa) => (
               <a target="_blank" href="https://wa.me/923446463437">
-                <div className="visaCard">
+                <div key={visa.id} className="visaCard">
                   <div className="content p-[0.813rem]">
                     <img src={visa.image} alt="saudiPic" />
                     <h3 className="font-semibold font-Poppins text-xl sm:text-2xl mt-3">

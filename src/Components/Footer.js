@@ -162,6 +162,7 @@ function Footer(props) {
                 <a
                   href="https://mail.google.com/mail/?view=cm&fs=1&to=safinaalmadina@gmail.com"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <p className="font-Poppins text-base text-white">
                     Safinaalmadina@gmail.com
@@ -174,7 +175,11 @@ function Footer(props) {
                   src={footerlocation}
                   alt="svg"
                 />
-                <a target="_blank" href="https://goo.gl/maps/tTEhxaUZiVWLvC9N7">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://goo.gl/maps/tTEhxaUZiVWLvC9N7"
+                >
                   <p>Qila Ahmad Abad, Narowal</p>
                 </a>
               </div>

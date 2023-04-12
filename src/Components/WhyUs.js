@@ -13,6 +13,7 @@ import whyvector4 from "../assets/whyvector4.svg";
 function WhyUs() {
   const whyUsContent = [
     {
+      id: 0,
       image: whyvector1,
       title: "Trust Worthy",
       discription:
@@ -20,6 +21,7 @@ function WhyUs() {
       animateDelay: 300,
     },
     {
+      id: 1,
       image: whyvector2,
       title: "Easy to Book",
       discription:
@@ -27,6 +29,7 @@ function WhyUs() {
       animateDelay: 500,
     },
     {
+      id: 2,
       image: whyvector3,
       title: "Best Price",
       discription:
@@ -34,6 +37,7 @@ function WhyUs() {
       animateDelay: 700,
     },
     {
+      id: 3,
       image: whyvector4,
       title: "Customer Services",
       discription:
@@ -63,7 +67,10 @@ function WhyUs() {
               delay={whyUs.animateDelay}
               animateIn="animate__fadeInUp"
             >
-              <div className="cardWhyUs space-y-[0.625rem] relative left-[4.8%] sm:static">
+              <div
+                key={whyUs.id}
+                className="cardWhyUs space-y-[0.625rem] relative left-[4.8%] sm:static"
+              >
                 <img src={whyvector1} alt="vector" />
                 <h3 className="font-Poppins text-2xl font-semibold">
                   {whyUs.title}

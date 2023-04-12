@@ -97,7 +97,6 @@ function Reviews() {
           breakpoints={{
             290: {
               slidesPerView: 1,
-              spaceBetween: 0,
               spaceBetween: 110,
             },
             1024: {
