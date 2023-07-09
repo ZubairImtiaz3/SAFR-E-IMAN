@@ -147,6 +147,7 @@ function Contact() {
               </a>
 
               <a
+                rel="noreferrer"
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=safinaalmadina@gmail.com"
                 target="_blank"
                 className="flex flex-col items-center px-4 py-3 text-gray-700 transition-colors duration-300 transform rounded-md  hover:bg-blue-200"

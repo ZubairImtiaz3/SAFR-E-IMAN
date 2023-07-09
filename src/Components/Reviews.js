@@ -14,52 +14,56 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 //images
 import review1 from "../assets/review1.jpg";
 import review2 from "../assets/review2.jpg";
+import clientReview from "../assets/client-review2.png";
+import clientReview1 from "../assets/client-reivew3.jpeg";
+import clientReview2 from "../assets/client-review 4.jpeg";
+import clientReview3 from "../assets/client-review5.jpeg";
 import fourStar from "../assets/rating4.jpg";
 import fiveStar from "../assets/rating5.png";
 
 function Reviews() {
   const reviewsContent = [
     {
-      image: review1,
+      image: clientReview,
       rating: fourStar,
-      title: "Abdul Ghaffar",
+      title: "Aziz Ahmed",
       discription:
-        "Fringilla accumsan, risus sem sollicitudin lacus, ut interdum  tellus elit sed risus ringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.",
+        "Purchasing air tickets from this agency was a breeze. Their team was responsive, and the prices were reasonable. I will definitely use their services again.",
+    },
+    {
+      image: clientReview1,
+      rating: fourStar,
+      title: "Ammar Khawar",
+      discription:
+        "The Umrah package was well-organized and hassle-free. Excellent communication from the team and great value for money.",
     },
     {
       image: review2,
       rating: fourStar,
       title: "Aqsa Mehmood",
       discription:
-        "Fringilla accumsan, risus sem sollicitudin lacus, ut interdum  tellus elit sed risus ringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.",
+        "The Umrah trip arranged by this agency was beyond expectations. The whole process was smooth, and they provided excellent service. Highly recommended.",
+    },
+    {
+      image: clientReview2,
+      rating: fiveStar,
+      title: "Syed Khizer Abbas",
+      discription:
+        "Recently, I purchased air tickets for my family through this agency. Not only did they find the best prices, Great work and a big thumbs up!",
     },
     {
       image: review1,
       rating: fiveStar,
       title: "Rehan Rana",
       discription:
-        "Fringilla accumsan, risus sem sollicitudin lacus, ut interdum  tellus elit sed risus ringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.",
+        "They arranged a custom trip for me and my family. All the arrangements were spot on. They really care about their clients and it shows in their service.",
     },
     {
-      image: review1,
+      image: clientReview3,
       rating: fourStar,
-      title: "Ammar Khawar",
+      title: "Zubair Imtiaz",
       discription:
-        "Fringilla accumsan, risus sem sollicitudin lacus, ut interdum  tellus elit sed risus ringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.",
-    },
-    {
-      image: review1,
-      rating: fourStar,
-      title: "Abdullah",
-      discription:
-        "Fringilla accumsan, risus sem sollicitudin lacus, ut interdum  tellus elit sed risus ringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.",
-    },
-    {
-      image: review1,
-      rating: fiveStar,
-      title: "Syed Khizer Abbas",
-      discription:
-        "Fringilla accumsan, risus sem sollicitudin lacus, ut interdum  tellus elit sed risus ringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.",
+        "Booked a custom trip to Turkey, and it was fantastic. Everything from flight tickets to hotel reservations was taken care of. Kudos to the team for such professionalism.",
     },
   ];
   return (
@@ -111,12 +115,18 @@ function Reviews() {
           modules={[Autoplay]}
           className="mySwiper"
         >
-          {reviewsContent.map((reviews) => (
-            <SwiperSlide>
+          {reviewsContent.map((reviews, index) => (
+            <SwiperSlide key={index}>
               <div className="reviewContainer w-[26.125rem] h-[12.875rem] flex justify-center items-center flex-col">
                 <div className="reviewContent space-y-[0.688rem]">
                   <div className="flex items-center space-x-3">
-                    <img src={reviews.image} alt="clientImg" />
+                    <div className="w-[49px] h-[49px] rounded-[50%] object-cover overflow-hidden">
+                      <img
+                        className="w-full h-full"
+                        src={reviews.image}
+                        alt="clientImg"
+                      />
+                    </div>
                     <img src={reviews.rating} alt="rating" />
                   </div>
                   <h3 className="font-Raleway font-bold text-2xl">

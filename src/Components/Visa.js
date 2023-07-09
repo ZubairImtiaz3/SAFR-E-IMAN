@@ -39,17 +39,26 @@ function Visa(props) {
         id="visa"
         className="visaContainer flex flex-col justify-center items-center mt-48"
       >
-        <AnimationOnScroll animateIn="animate__fadeIn">
+        <AnimationOnScroll animateOnce animateIn="animate__fadeIn">
           <h2 className="font-Raleway font-bold text-3xl sm:text-[2.5rem] text-center">
             Popular places we provide Visas
           </h2>
         </AnimationOnScroll>
 
-        <AnimationOnScroll delay={300} animateIn="animate__fadeInRight">
+        <AnimationOnScroll
+          delay={300}
+          animateOnce
+          animateIn="animate__fadeInRight"
+        >
           <div className="visaCardContainer pt-[5.438rem] flex flex-wrap justify-center gap-12 sm:gap-16 mb-32">
-            {visaContent.map((visa) => (
-              <a target="_blank" href="https://wa.me/923446463437">
-                <div key={visa.id} className="visaCard">
+            {visaContent.map((visa, index) => (
+              <a
+                key={index}
+                rel="noreferrer"
+                target="_blank"
+                href="https://wa.me/923446463437"
+              >
+                <div className="visaCard">
                   <div className="content p-[0.813rem]">
                     <img src={visa.image} alt="saudiPic" />
                     <h3 className="font-semibold font-Poppins text-xl sm:text-2xl mt-3">

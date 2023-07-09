@@ -61,16 +61,14 @@ function WhyUs() {
         </AnimationOnScroll>
 
         <div className="cardsContainerWhyUS flex space-x-8 justify-center flex-wrap">
-          {whyUsContent.map((whyUs) => (
+          {whyUsContent.map((whyUs, index) => (
             <AnimationOnScroll
+              key={index}
               animateOnce={true}
               delay={whyUs.animateDelay}
               animateIn="animate__fadeInUp"
             >
-              <div
-                key={whyUs.id}
-                className="cardWhyUs space-y-[0.625rem] relative left-[4.8%] sm:static"
-              >
+              <div className="cardWhyUs space-y-[0.625rem] relative left-[4.8%] sm:static">
                 <img src={whyvector1} alt="vector" />
                 <h3 className="font-Poppins text-2xl font-semibold">
                   {whyUs.title}

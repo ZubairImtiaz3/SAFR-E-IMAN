@@ -30,13 +30,13 @@ function Infobar(props) {
           </div>
         </div>
         <div className="socialContent space-x-5 pr-[4.25rem] hidden md:flex">
-          <a href="#">
+          <a href="/">
             <img className="icon" src={fbSvg} alt="fbIcon" />
           </a>
-          <a href="#">
+          <a href="/">
             <img className="icon" src={whatsappSvg} alt="fbIcon" />
           </a>
-          <a href="#">
+          <a href="/">
             <img className="icon" src={instaSvg} alt="fbIcon" />
           </a>
         </div>

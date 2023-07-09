@@ -4,7 +4,6 @@ import PropagateLoader from "react-spinners/PropagateLoader";
 import "./App.css";
 
 // Components
-
 import Infobar from "./Components/Infobar";
 import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
@@ -24,7 +23,7 @@ function App() {
 
     setTimeout(() => {
       setloading(false);
-    }, 3500);
+    }, 2500);
   }, []);
 
   //scroll to  top on link
