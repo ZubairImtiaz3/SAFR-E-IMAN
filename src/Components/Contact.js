@@ -1,6 +1,11 @@
 import React, { useRef } from "react";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import ClipLoader from "react-spinners/ClipLoader";
+import Modal from "../Components/Modal";
 
 import Animatedpage from "./Animatedpage";
 import contactSvg from "../assets/contact.svg";
@@ -12,74 +17,59 @@ import ScrollTop from "react-scrolltop-button";
 import "animate.css";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
+//Yup Validation
+const schema = yup.object().shape({
+  from_name: yup.string().required("Name is required"),
+  from_email: yup
+    .string()
+    .email("Email must be valid")
+    .required("Email is required"),
+  message: yup.string().required("Message is required"),
+});
+
 function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [modal, setModal] = useState(false);
 
-  const [alert, setAlert] = useState("");
-  const [hideForm, setHideForm] = useState("");
-
-  //Reseting Form After Submit
-
-  const clearForm = () => {
-    setName("");
-    setEmail("");
-    setMessage("");
-  };
+  // useForm with yupResolver
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm({
+    resolver: yupResolver(schema),
+    mode: "onBlur",
+  });
 
   const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const closePopup = () => {
+    setModal(false);
+  };
 
-    window.scrollTo(0, 710);
-
-    clearForm();
+  const sendEmail = () => {
+    setLoading(true);
 
     emailjs
       .sendForm(
-        "service_i15jugt",
-        "template_mtrsscy",
+        "service_mruz26q",
+        "template_q3x153s",
         form.current,
-        "wyBk70zbfe-AdvM4I"
+        "tlJLOfnZ5Nkeq8wD-"
       )
       .then(
         (result) => {
           console.log(result.text);
+          setLoading(false);
+          setModal(true);
+          reset();
         },
         (error) => {
           console.log(error.text);
         }
       );
-
-    setAlert(alertSubmit);
-
-    setTimeout(() => {
-      setAlert("");
-    }, 1500);
-
-    setHideForm("hidden");
-
-    setTimeout(() => {
-      setHideForm("");
-    }, 1500);
   };
-
-  const alertSubmit = (
-    <div className="w-[100vw] h-[100vh] flex justify-center items-center">
-      <div className=" mt-8 p-4 sm:p-0">
-        <div role="alert">
-          <div class="bg-[#efbd69] text-black font-bold rounded-t px-4 py-2">
-            Success.
-          </div>
-          <div class="border border-t-0  bg-gray-200 px-4 py-3 text-black">
-            <p>Your Queries Subimitted Successfully. THANKYOU !</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
 
   return (
     <>
@@ -99,20 +89,21 @@ function Contact() {
 
         <AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn">
           <section
-            className={`contact ${hideForm} w-full max-w-3xl px-6 py-4 mx-auto bg-white rounded-md shadow-md mt-20`}
+            className={`contact w-full max-w-3xl px-6 py-4 mx-auto bg-white rounded-md shadow-md mt-20`}
           >
             <h2 className="text-3xl font-Raleway font-semibold text-center text-gray-800">
               Get in touch
             </h2>
 
             <p className="mt-3 font-Poppins text-center text-gray-600">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Discover hidden gems, book accommodations, and create
+              unforgettable memories.
             </p>
 
             <div className="font-Poppins grid grid-cols-1 gap-6 mt-6 sm:grid-cols-2 md:grid-cols-3">
               <a
                 href="https://goo.gl/maps/tTEhxaUZiVWLvC9N7"
-                className="flex flex-col items-center px-4 py-3 text-gray-700 transition-colors duration-300 transform rounded-md  hover:bg-blue-200"
+                className="flex flex-col items-center px-4 py-3 text-gray-700 transition-colors duration-300 transform rounded-md  hover:bg-[#efbe699f]"
               >
                 <svg
                   className="w-5 h-5"
@@ -132,7 +123,7 @@ function Contact() {
 
               <a
                 href="https://wa.me/923446463437"
-                className="flex flex-col items-center px-4 py-3 text-gray-700 transition-colors duration-300 transform rounded-md  hover:bg-blue-200"
+                className="flex flex-col items-center px-4 py-3 text-gray-700 transition-colors duration-300 transform rounded-md  hover:bg-[#efbe699f]"
               >
                 <svg
                   className="w-5 h-5"
@@ -150,7 +141,7 @@ function Contact() {
                 rel="noreferrer"
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=safinaalmadina@gmail.com"
                 target="_blank"
-                className="flex flex-col items-center px-4 py-3 text-gray-700 transition-colors duration-300 transform rounded-md  hover:bg-blue-200"
+                className="flex flex-col items-center px-4 py-3 text-gray-700 transition-colors duration-300 transform rounded-md  hover:bg-[#efbe699f]"
               >
                 <svg
                   className="w-5 h-5"
@@ -167,7 +158,7 @@ function Contact() {
             </div>
 
             <div className="mt-6 ">
-              <form ref={form} onSubmit={sendEmail}>
+              <form ref={form} onSubmit={handleSubmit(sendEmail)}>
                 <div className="font-poppins items-center -mx-2 md:flex">
                   <div className="w-full mx-2">
                     <label className="block mb-2 text-sm font-medium text-gray-600 ">
@@ -175,13 +166,16 @@ function Contact() {
                     </label>
 
                     <input
-                      required
-                      className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                      {...register("from_name")}
+                      className={`block w-full px-4 py-2 text-gray-700 bg-white border rounded-md 
+                  ${errors.from_name ? "border-red-500" : ""}`}
                       type="text"
-                      name="from_name"
-                      value={name}
-                      onChange={(event) => setName(event.target.value)}
                     />
+                    {errors.from_name && (
+                      <p className="text-red-400 mt-1">
+                        {errors.from_name.message}
+                      </p>
+                    )}
                   </div>
 
                   <div className="w-full mx-2 mt-4 md:mt-0">
@@ -190,13 +184,16 @@ function Contact() {
                     </label>
 
                     <input
-                      required
-                      className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                      {...register("from_email")}
+                      className={`block w-full px-4 py-2 text-gray-700 bg-white border rounded-md 
+                  ${errors.from_email ? "border-red-500" : ""}`}
                       type="email"
-                      name="from_name"
-                      value={email}
-                      onChange={(event) => setEmail(event.target.value)}
                     />
+                    {errors.from_email && (
+                      <p className="text-red-400 mt-1">
+                        {errors.from_email.message}
+                      </p>
+                    )}
                   </div>
                 </div>
 
@@ -206,12 +203,15 @@ function Contact() {
                   </label>
 
                   <textarea
-                    value={message}
-                    onChange={(event) => setMessage(event.target.value)}
-                    required
-                    name="message"
-                    className="block w-full h-40 px-4 py-2 text-gray-700 bg-white border rounded-md focus:border-blue-400  focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
+                    {...register("message")}
+                    className={`block w-full h-40 px-4 py-2 text-gray-700 bg-white border rounded-md 
+                ${errors.message ? "border-red-500" : ""}`}
                   ></textarea>
+                  {errors.message && (
+                    <p className="text-red-400 mt-1">
+                      {errors.message.message}
+                    </p>
+                  )}
                 </div>
 
                 <div className="font-Poppins flex justify-center mt-6">
@@ -220,7 +220,13 @@ function Contact() {
                     value="Send"
                     className="px-4 py-2 text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600"
                   >
-                    Send Message
+                    {loading ? (
+                      <span className="flex justify-center items-center gap-2">
+                        Sending... <ClipLoader size={17} color="#EFBD69" />
+                      </span>
+                    ) : (
+                      <span>Send Message</span>
+                    )}
                   </button>
                 </div>
               </form>
@@ -228,7 +234,21 @@ function Contact() {
           </section>
         </AnimationOnScroll>
 
-        {alert}
+        {modal && (
+          <Modal
+            onClose={closePopup}
+            activeModal={true}
+            title="Success"
+            centered
+          >
+            <div className="">
+              <p>
+                Your Queries Submitted Successfully. Our Team will reach out to
+                you soon. THANKYOU !
+              </p>
+            </div>
+          </Modal>
+        )}
       </Animatedpage>
     </>
   );
