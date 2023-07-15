@@ -21,6 +21,8 @@ import clientReview3 from "../assets/client-review5.jpeg";
 import fourStar from "../assets/rating4.jpg";
 import fiveStar from "../assets/rating5.png";
 
+import LazyLoad from "react-lazyload";
+
 function Reviews() {
   const reviewsContent = [
     {
@@ -121,11 +123,13 @@ function Reviews() {
                 <div className="reviewContent space-y-[0.688rem]">
                   <div className="flex items-center space-x-3">
                     <div className="w-[49px] h-[49px] rounded-[50%] object-cover overflow-hidden">
-                      <img
-                        className="w-full h-full"
-                        src={reviews.image}
-                        alt="clientImg"
-                      />
+                      <LazyLoad height={49} offset={100}>
+                        <img
+                          className="w-full h-full"
+                          src={reviews.image}
+                          alt="clientImg"
+                        />
+                      </LazyLoad>
                     </div>
                     <img src={reviews.rating} alt="rating" />
                   </div>

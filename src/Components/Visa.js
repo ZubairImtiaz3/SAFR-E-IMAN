@@ -7,6 +7,8 @@ import behrain from "../assets/behrain.jpg";
 import "animate.css";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
+import LazyLoad from "react-lazyload";
+
 function Visa(props) {
   const visaContent = [
     {
@@ -60,7 +62,9 @@ function Visa(props) {
               >
                 <div className="visaCard">
                   <div className="content p-[0.813rem]">
-                    <img src={visa.image} alt="saudiPic" />
+                    <LazyLoad height={266} offset={100}>
+                      <img src={visa.image} alt={visa.city} />
+                    </LazyLoad>
                     <h3 className="font-semibold font-Poppins text-xl sm:text-2xl mt-3">
                       {visa.city}
                     </h3>

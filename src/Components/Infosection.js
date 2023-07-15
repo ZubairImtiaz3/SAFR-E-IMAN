@@ -16,6 +16,8 @@ import WhyUs from "./WhyUs";
 import ScrollTop from "react-scrolltop-button";
 import Reviews from "./Reviews";
 
+import LazyLoad from "react-lazyload";
+
 function Infosection(props) {
   return (
     <>
@@ -85,12 +87,16 @@ function Infosection(props) {
             animateIn="animate__fadeIn"
           >
             <div className="umrahimg flex items-center pt-3 space-x-5">
-              <img className="umrahimg1" src={umrah1} alt="pic" />
-              <img
-                className="umrahimg2 z-[2] rounded-lg hidden lg:block"
-                src={umrah2}
-                alt="pic"
-              />
+              <LazyLoad height={168} offset={100}>
+                <img className="umrahimg1" src={umrah1} alt="pic" />
+              </LazyLoad>
+              <LazyLoad height={168} offset={100}>
+                <img
+                  className="umrahimg2 z-[2] rounded-lg hidden lg:block"
+                  src={umrah2}
+                  alt="pic"
+                />
+              </LazyLoad>
             </div>
           </AnimationOnScroll>
         </div>
@@ -99,11 +105,13 @@ function Infosection(props) {
           delay={1100}
           animateIn="animate__fadeInRight"
         >
-          <img
-            className="-translate-x-8 hidden xl:block"
-            src={umrah3}
-            alt="pic"
-          />
+          <LazyLoad height={536} offset={100}>
+            <img
+              className="-translate-x-8 hidden xl:block"
+              src={umrah3}
+              alt="pic"
+            />
+          </LazyLoad>
         </AnimationOnScroll>
       </div>
 
