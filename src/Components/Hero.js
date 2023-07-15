@@ -58,7 +58,7 @@ const slideData = [
     backgroundImage: slide6,
   },
   {
-    label: "Trip",
+    label: "Book a Trip",
     title: "Plan a Trip",
     subtitle:
       "If you are looking to customize your trip, you have come to the right place! We understand that everyone has unique preferences and requirements when it comes to travel, and we are here to assist you in creating the perfect itinerary.",
@@ -114,6 +114,7 @@ function Hero() {
           <ButtonsNav
             isNullAfterThreshold
             position={{
+              width: "100vw",
               top: 0,
               left: "0%",
               transform: "translateX(0%)",
