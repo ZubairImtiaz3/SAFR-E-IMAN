@@ -117,7 +117,7 @@ function Reviews() {
         >
           {reviewsContent.map((reviews, index) => (
             <SwiperSlide key={index}>
-              <div className="reviewContainer max-w-[26.125rem] h-[12.875rem] flex justify-center items-center flex-col p-4 ml-2">
+              <div className="reviewContainer max-w-[26.125rem] h-[12.875rem] flex justify-center items-center flex-col p-4 ml-2 md:p-0 md:ml-0">
                 <div className="reviewContent space-y-[0.688rem]">
                   <div className="flex items-center space-x-3">
                     <div className="w-[49px] h-[49px] rounded-[50%] object-cover overflow-hidden">
