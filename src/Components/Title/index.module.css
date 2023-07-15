@@ -8,9 +8,6 @@
   font-style: normal;
   font-weight: 700;
   font-size: 2rem;
-  line-height: 2.938px;
-  /* identical to box height */
-
   color: #ffffff;
 }
 @media screen and (min-width: 768px) {
