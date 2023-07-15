@@ -90,8 +90,8 @@ function Navbar(props) {
             : `h-28 ${navStyle}`
         }
       >
-        <Link to="/">
-          <img src={logo} alt="" />
+        <Link aria-label="Travels & Tour Agency" to="/">
+          <img src={logo} alt="Safina Al Madina" />
         </Link>
 
         <div className="mobileMenu mt-2 xl:hidden">
