@@ -28,7 +28,7 @@ function Infosection(props) {
       />
 
       {/* UMRAH SECTION */}
-      <div className="umrahContainer max-w-[94.5%] mx-auto flex justify-center mt-[7.875rem]">
+      <div className="umrahContainer max-w-[94.5%] mx-auto flex justify-center mt-[4.875rem] xl:mt-48">
         <div className="contentUmrah space-y-5">
           <AnimationOnScroll
             animateOnce={true}
@@ -118,7 +118,7 @@ function Infosection(props) {
 
       {/* BANKDETAILSECTION */}
       <AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn">
-        <h2 className="font-Poppins font-bold text-3xl sm:text-[2.5rem] text-center sm:text-left pl-[4.5%] mt-[9.75rem]">
+        <h2 className="font-Poppins font-bold text-3xl sm:text-[2.5rem] text-center sm:text-left pl-[4.5%] mt-[4.875rem] md:mt-24 lg:mt-28 xl:mt-[9.75rem]">
           Our Bank Accounts
         </h2>
       </AnimationOnScroll>

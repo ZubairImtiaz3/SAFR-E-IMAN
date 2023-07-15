@@ -37,7 +37,7 @@ function Visa(props) {
 
       <div
         id="visa"
-        className="visaContainer flex flex-col justify-center items-center mt-48"
+        className="visaContainer flex flex-col justify-center items-center mt-[4.875rem] xl:mt-[7.875rem]"
       >
         <AnimationOnScroll animateOnce animateIn="animate__fadeIn">
           <h2 className="font-Raleway font-bold text-3xl sm:text-[2.5rem] text-center">

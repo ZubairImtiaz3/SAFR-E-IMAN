@@ -69,7 +69,7 @@ function Reviews() {
   return (
     <>
       <AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn">
-        <h3 className="font-Raleway font-bold text-3xl mt-[8.125rem] sm:text-[2.5rem] text-center sm:ml-[3.25rem] sm:text-left mb-8">
+        <h3 className="font-Raleway font-bold text-3xl mt-[4.875rem] md:mt-24 lg:mt-28 xl:mt-[8.125rem] sm:text-[2.5rem] text-center sm:ml-[3.25rem] sm:text-left mb-8">
           Reviews
         </h3>
       </AnimationOnScroll>

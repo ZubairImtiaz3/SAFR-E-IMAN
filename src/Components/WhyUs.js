@@ -48,7 +48,7 @@ function WhyUs() {
 
   return (
     <>
-      <div className="whyUsContainer h-auto xl:h-[34.75rem] ml-5 sm:ml-10">
+      <div className="whyUsContainer h-auto xl:h-[34.75rem] sm:rounded-[40px_0px_0px_40px] sm:ml-10 pb-12 xl:pb-0">
         <AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn">
           <div className="contentWhyus pt-12 space-y-2 sm:space-y-1">
             <h2 className="font-Raleway text-3xl sm:text-[2.5rem] font-bold text-center">
@@ -60,7 +60,7 @@ function WhyUs() {
           </div>
         </AnimationOnScroll>
 
-        <div className="cardsContainerWhyUS flex space-x-8 justify-center flex-wrap">
+        <div className="cardsContainerWhyUS flex gap-4 md:gap-8 justify-center flex-wrap">
           {whyUsContent.map((whyUs, index) => (
             <AnimationOnScroll
               key={index}
@@ -68,7 +68,7 @@ function WhyUs() {
               delay={whyUs.animateDelay}
               animateIn="animate__fadeInUp"
             >
-              <div className="cardWhyUs space-y-[0.625rem] relative left-[4.8%] sm:static">
+              <div className="cardWhyUs space-y-[0.625rem] mt-16 md:mt-10 xl:mt-[6.5rem]">
                 <img src={whyvector1} alt="vector" />
                 <h3 className="font-Poppins text-2xl font-semibold">
                   {whyUs.title}

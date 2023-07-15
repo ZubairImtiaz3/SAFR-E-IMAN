@@ -144,7 +144,6 @@ nav {
 
 .whyUsContainer {
   background: linear-gradient(320.63deg, #004680 -2.55%, #ffe587 72.09%);
-  border-radius: 40px 0px 0px 40px;
   max-width: 100%;
 }
 
@@ -158,7 +157,6 @@ nav {
   align-items: center;
   flex-direction: column;
   padding-top: 15px;
-  margin-top: 6.5rem;
 }
 
 /* ReviewSection */

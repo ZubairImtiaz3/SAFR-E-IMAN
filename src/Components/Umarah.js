@@ -137,7 +137,9 @@ function Umarah(props) {
                   </div>
                   <div
                     className={`containerChild flex justify-center flex-col items-center space-y-12 bg-white ${
-                      index === 1 ? "xl:h-[27.7rem]" : "h-[21.813rem]"
+                      index === 1
+                        ? "pb-4 xl:pb-0 xl:h-[27.7rem]"
+                        : "h-[21.813rem]"
                     }`}
                   >
                     <div className="containerChild font-Poppins text-xs space-y-6">
