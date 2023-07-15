@@ -250,6 +250,26 @@ thead th {
   }
 }
 
+.hero-slider-previous {
+  display: none;
+
+}
+.hero-slider-next {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-slider-previous {
+   display: block;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-slider-next {
+   display: block;
+  }
+}
+
 /* footer */
 
 footer {
