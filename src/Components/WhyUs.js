@@ -66,7 +66,11 @@ function WhyUs() {
               key={index}
               animateOnce={true}
               delay={whyUs.animateDelay}
-              animateIn="animate__fadeInUp"
+              animateIn={`${
+                window.innerWidth < 768 && index === 3
+                  ? "animate__fadeIn"
+                  : "animate__fadeInUp"
+              }`}
             >
               <div className="cardWhyUs space-y-[0.625rem] mt-16 md:mt-10 xl:mt-[6.5rem]">
                 <img src={whyvector1} alt="vector" />
