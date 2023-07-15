@@ -83,14 +83,14 @@ function Infosection(props) {
 
           <AnimationOnScroll
             animateOnce={true}
-            delay={900}
+            delay={700}
             animateIn="animate__fadeIn"
           >
             <div className="umrahimg flex items-center pt-3 space-x-5">
-              <LazyLoad height={168} offset={100}>
+              <LazyLoad height={250} offset={100}>
                 <img className="umrahimg1" src={umrah1} alt="pic" />
               </LazyLoad>
-              <LazyLoad height={168} offset={100}>
+              <LazyLoad height={250} offset={100}>
                 <img
                   className="umrahimg2 z-[2] rounded-lg hidden lg:block"
                   src={umrah2}
@@ -105,7 +105,7 @@ function Infosection(props) {
           delay={1000}
           animateIn="animate__fadeInRight"
         >
-          <LazyLoad height={636} offset={100}>
+          <LazyLoad height={650} offset={100}>
             <img
               className="-translate-x-8 hidden xl:block"
               src={umrah3}
