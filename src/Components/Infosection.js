@@ -102,10 +102,10 @@ function Infosection(props) {
         </div>
         <AnimationOnScroll
           animateOnce={true}
-          delay={1100}
+          delay={1000}
           animateIn="animate__fadeInRight"
         >
-          <LazyLoad height={536} offset={100}>
+          <LazyLoad height={536}>
             <img
               className="-translate-x-8 hidden xl:block"
               src={umrah3}
