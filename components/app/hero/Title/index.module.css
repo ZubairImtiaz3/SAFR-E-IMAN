@@ -1,0 +1,17 @@
+.Container {
+  margin: 0 auto;
+  padding: 0;
+  text-transform: uppercase;
+  width: 90%;
+  text-align: center;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .Container {
+    font-size: 2.5rem;
+  }
+}

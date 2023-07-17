@@ -45,3 +45,356 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+} */
+
+.loader {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Navbar */
+
+nav {
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
+}
+.mainLinks li a:hover {
+  color: #ceb041;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.icon:hover {
+  filter: invert(0.5) sepia(1.5);
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+/* heroSection */
+
+/* buttons */
+
+.umrahBtn {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 8px 32px;
+  gap: 2px;
+  background: linear-gradient(122.62deg, #c4a430 22.11%, #ffe587 92.94%);
+  border-radius: 26px;
+}
+.umrahBtn:hover {
+  box-shadow: 4px 5px 27px 4px rgba(195, 164, 48, 1);
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.bookBtn {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 1px 11px;
+  gap: 10px;
+  background: linear-gradient(
+    100.66deg,
+    rgba(255, 255, 255, 0.3) 4.34%,
+    rgba(255, 255, 255, 0.3) 101.03%
+  );
+  backdrop-filter: blur(13px);
+  border-radius: 21px;
+}
+.buyNowBtn {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 6px 21px;
+  gap: 2px;
+  background: #004680;
+  border-radius: 26px;
+}
+.buyNowBtn:hover {
+  box-shadow: 2px 3px 15px 2px rgba(0, 70, 128, 1);
+}
+
+/* UmrahSection */
+
+.umrahimg2 {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+.umrahimg1 {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+.heroUmarah {
+  background-image: url(./assets/parallex.jpg);
+  background-repeat: no-repeat;
+  background-position: 107%;
+  background-attachment: fixed;
+  width: 100%;
+  height: 37.25rem;
+}
+
+@media screen and (min-width: 1500px) {
+  .heroUmarah {
+    background-position: 100%;
+  }
+}
+@media screen and (min-width: 1790px) {
+  .leftHeroUmarah {
+    width: 80%;
+  }
+}
+
+/* VisasSection */
+
+.visaCard {
+  max-width: 22.563rem;
+  max-height: 24.646rem;
+  background: #ffffff;
+  border: 1px solid #f5f5f5;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+@media screen and (min-width: 640px) {
+  .visaCard:hover {
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    transform: scale(1.125);
+    border-radius: 8px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .visaCardContainer {
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* whyUsSection */
+
+.whyUsContainer {
+  background: linear-gradient(320.63deg, #004680 -2.55%, #ffe587 72.09%);
+  max-width: 100%;
+}
+
+.cardWhyUs {
+  background-image: url(../src/assets/whyUsBg.jpg);
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  width: 16.188rem;
+  height: 12.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 15px;
+}
+
+/* ReviewSection */
+
+.reviewContainer {
+  background: #ffffff;
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+.swiper-wrapper {
+  display: flex;
+  margin-left: 3.7%;
+}
+@media screen and (max-width: 640px) {
+  .swiper-wrapper {
+    margin-left: 0%;
+  }
+}
+.swiper {
+  display: flex;
+}
+
+.lineReview {
+  border: 1px solid #7a7a7a;
+  margin: 0 3.25rem 0 3.25rem;
+}
+
+/* BankDetailSection */
+.tableBank {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+}
+
+table {
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 1rem;
+}
+
+th {
+  text-align: left;
+}
+
+thead th {
+  background-color: white;
+  color: black;
+}
+
+@media screen and (min-width: 1024px) {
+  table {
+    width: 62.5rem;
+    height: 26.438rem;
+  }
+}
+
+.bankdetailContainer {
+  overflow-x: auto;
+}
+
+@media screen and (max-width: 640px) {
+  .bankdetailContainer {
+    max-width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+/* UmarahPkgsSection */
+
+.containerPkg {
+  filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.1));
+}
+.contentContainerChild {
+  border-radius: 12px 12px 0px 0px;
+}
+.contentContainerChild2 {
+  background: linear-gradient(
+    127.28deg,
+    #000000 25.84%,
+    rgba(28, 119, 195, 0.8) 126.77%
+  );
+  border-radius: 12px 12px 0px 0px;
+}
+
+@media screen and (max-width: 640px) {
+  .contentPkg {
+    max-width: 80%;
+  }
+}
+
+.hero-slider-previous {
+  display: none;
+
+}
+.hero-slider-next {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-slider-previous {
+   display: block;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-slider-next {
+   display: block;
+  }
+}
+
+/* footer */
+
+footer {
+  background: #000000;
+}
+.footerLinks ul li a:hover {
+  color: #ceb041;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+/* MAP */
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+/* Contact */
+@media screen and (max-width: 640px) {
+  .illustrationContact {
+    max-width: 80%;
+  }
+}
+
+/* SCROLLTOTHETOP */
+
+.react-scrolltop-button {
+  display: flex;
+  align-items: center;
+  width: 2.888rem;
+  height: 2.888rem;
+  right: 1.4% !important;
+  bottom: 2.5% !important;
+  background-color: #efbd69 !important;
+  padding: 12px !important;
+  border: 0px solid #000000 !important;
+  border-radius: 8.471rem !important;
+}
+
+.react-scrolltop-button:hover {
+  color: black !important;
+}
+
+@media screen and (max-width: 550px) {
+  .react-scrolltop-button {
+    width: 2.5rem;
+    height: 2.5rem;
+    right: 4.8% !important;
+    bottom: 2.8% !important;
+    padding: 10px !important;
+  }
+}
+
+/* ScrollBar */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #efbd69;
+}
