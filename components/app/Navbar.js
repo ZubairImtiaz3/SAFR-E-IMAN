@@ -1,19 +1,16 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Link as Link1 } from "react-scroll";
-
-import logo from "../assets/logo.svg";
+"use client";
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import logo from "@/public/assets/partials/logo.svg";
 
 function Navbar(props) {
-  //MOBILE NAV STATES
-
   const [open, setOpen] = useState(false);
+  const [navFix, setnavFix] = useState(false);
 
   const toggle = () => {
     setOpen((prevState) => !prevState);
   };
-
-  // FUNCTION FOR HAMBURGER
 
   function MenuItem({ children, href }) {
     const hideHam = () => {
@@ -24,61 +21,38 @@ function Navbar(props) {
       hideHam();
       props.linkScroll();
     };
+
     return (
       <div className="p-2">
-        <Link onClick={scrollTopSmaller} to={href} className={style.item}>
+        <Link href={href} onClick={scrollTopSmaller} className={style.item}>
           {children}
         </Link>
       </div>
     );
   }
 
-  function MenuItem1({ children, href }) {
-    const hideHam = () => {
-      setOpen(false);
-      return (
-        <div className="p-2">
-          <Link1 onClick={hideHam} to={href} className={style.item}>
-            {children}
-          </Link1>
-        </div>
-      );
-    };
-
-    return (
-      <div className="p-2">
-        <Link1
-          spy={true}
-          smooth={true}
-          offset={-125}
-          duration={1200}
-          onClick={hideHam}
-          to={href}
-          className={style.item}
-        >
-          {children}
-        </Link1>
-      </div>
-    );
-  }
-
-  //StickyNavbar
-  const [navFix, setnavFix] = useState(false);
-
-  const navCheckToFix = () => {
-    if (window.scrollY >= 50) {
-      setnavFix(true);
-    } else {
-      setnavFix(false);
-    }
-  };
-
-  window.addEventListener("scroll", navCheckToFix);
-
   const navStyle =
     "bg-black flex items-center justify-between pl-4 sm:pl-[5.438rem] xl:pr-[12.5rem]";
 
   const spacerNavFix = <div className="h-[90px]"></div>;
+
+  useEffect(() => {
+    const navCheckToFix = () => {
+      if (window.scrollY >= 50) {
+        setnavFix(true);
+      } else {
+        setnavFix(false);
+      }
+    };
+
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", navCheckToFix);
+
+      return () => {
+        window.removeEventListener("scroll", navCheckToFix);
+      };
+    }
+  }, []);
 
   return (
     <>
@@ -90,8 +64,8 @@ function Navbar(props) {
             : `h-28 ${navStyle}`
         }
       >
-        <Link aria-label="Travels & Tour Agency" to="/">
-          <img src={logo} alt="Safina Al Madina" />
+        <Link href="/" aria-label="Travels & Tour Agency">
+          <Image src={logo} alt="Safina Al Madina" />
         </Link>
 
         <div className="mobileMenu mt-2 xl:hidden">
@@ -114,44 +88,34 @@ function Navbar(props) {
             <MenuContainer>
               <MenuItem href="/">Home</MenuItem>
               <MenuItem href="/umarah">Umrah</MenuItem>
-              <MenuItem1 href="visa">Visa & Services</MenuItem1>
+              <MenuItem href="#visa">Visa & Services</MenuItem>
               <MenuItem href="/contact">Contact</MenuItem>
-              <MenuItem1 href="footer">About</MenuItem1>
+              <MenuItem href="#footer">About</MenuItem>
             </MenuContainer>
           </Menu>
         </div>
 
-        <ul className="mainLinks font-Raleway text-white text-base space-x-[3.75rem] hidden xl:flex">
+        <ul className="mainLinks font-raleway text-white text-base space-x-[3.75rem] hidden xl:flex">
           <li>
-            <Link onClick={props.linkScroll} to="/">
+            <Link href="/" onClick={props.linkScroll}>
               Home
             </Link>
           </li>
           <li>
-            <Link onClick={props.linkScroll} to="/umarah">
+            <Link href="/umarah" onClick={props.linkScroll}>
               Umrah
             </Link>
           </li>
-          <li className="cursor-pointer">
-            <Link1
-              spy={true}
-              smooth={true}
-              offset={-125}
-              duration={800}
-              to="visa"
-            >
-              Visa & Services
-            </Link1>
+          <li>
+            <Link href="#visa">Visa & Services</Link>
           </li>
           <li>
-            <Link onClick={props.linkScroll} to="/contact">
+            <Link href="/contact" onClick={props.linkScroll}>
               Contact
             </Link>
           </li>
-          <li className="cursor-pointer">
-            <Link1 spy={true} smooth={true} duration={1600} to="footer">
-              About
-            </Link1>
+          <li>
+            <Link href="#footer">About</Link>
           </li>
         </ul>
       </nav>
@@ -159,7 +123,6 @@ function Navbar(props) {
   );
 }
 
-// Logic
 const style = {
   container: `relative top-[8rem] w-full text-center mt-8 space-y-6`,
   item: `text-2xl text-gray-400 cursor-pointer hover:text-white`,
@@ -173,8 +136,9 @@ const style = {
 function Menu({ children, open }) {
   return (
     <div
-      className={`${style.menu.default} 
-       ${open ? style.menu.open : style.menu.close}`}
+      className={`${style.menu.default} ${
+        open ? style.menu.open : style.menu.close
+      }`}
     >
       {children}
     </div>

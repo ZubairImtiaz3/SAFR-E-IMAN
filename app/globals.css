@@ -140,7 +140,7 @@ nav {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
 }
 .heroUmarah {
-  background-image: url(./assets/parallex.jpg);
+  background-image: url(./../public/assets/umarah/parallex.jpg);
   background-repeat: no-repeat;
   background-position: 107%;
   background-attachment: fixed;
@@ -196,7 +196,7 @@ nav {
 }
 
 .cardWhyUs {
-  background-image: url(../src/assets/whyUsBg.jpg);
+  background-image: url(../public/assets/whyUs/whyUsBg.jpg);
   background-repeat: no-repeat;
   border-radius: 20px;
   width: 16.188rem;
