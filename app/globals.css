@@ -398,3 +398,7 @@ footer {
 ::-webkit-scrollbar-thumb {
   background-color: #efbd69;
 }
+
+.hero-slider-buttons-nav-button {
+  @apply font-poppins;
+}
