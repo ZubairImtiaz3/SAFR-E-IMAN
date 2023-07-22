@@ -1,4 +1,6 @@
-import "animate.css/animate.min.css";
+"use client";
+
+import Image from "next/image";
 import Link from "next/link";
 import Hero from "@/components/app/hero/Hero";
 import Visa from "@/components/app/Visa";
@@ -10,11 +12,22 @@ import arrow from "@/public/assets/umarah/arrow.svg";
 import umrah1 from "@/public/assets/umarah/umrah1.jpg";
 import umrah2 from "@/public/assets/umarah/umrah2.jpg";
 import umrah3 from "@/public/assets/umarah/umrahmain.jpg";
-import Image from "next/image";
+
+//SCROLLTOTOP
+import ScrollTop from "react-scrolltop-button";
 
 export default function Home() {
   return (
     <>
+      <ScrollTop
+        text="^"
+        distance={900}
+        className="scroll-your-role"
+        speed={500}
+        target={0}
+        breakpoint={2560}
+      />
+
       <Hero />
 
       <div className="umrahContainer max-w-[94.5%] mx-auto flex justify-center mt-[4.875rem] xl:mt-48">

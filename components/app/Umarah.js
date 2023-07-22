@@ -1,9 +1,8 @@
-import topRated from "../assets/toprated.jpg";
-import Animatedpage from "./Animatedpage";
+"use client";
 
-//import animation
-import "animate.css";
-import { AnimationOnScroll } from "react-animation-on-scroll";
+import Image from "next/image";
+import topRated from "@/public/assets/umarah/toprated.jpg";
+import Animatedpage from "@/components/app/route/Animatedpage";
 
 //SCROLLTOTOP
 import ScrollTop from "react-scrolltop-button";
@@ -66,11 +65,11 @@ function Umarah(props) {
         <div className="heroUmarah hidden mt-4 xl:block">
           <div className="leftHeroUmarah bg-black w-[75%] h-[37.25rem] text-white pt-[9.438rem] text-center">
             <div className="contentLeftHeroUmarah translate-x-44">
-              <h2 className="font-Raleway font-semibold text-7xl">UMRAH</h2>
-              <h2 className="font-Raleway font-semibold text-5xl pt-4">
+              <h2 className="font-raleway font-semibold text-7xl">UMRAH</h2>
+              <h2 className="font-raleway font-semibold text-5xl pt-4">
                 PAKAGES
               </h2>
-              <h2 className="font-Poppins font-medium text-[5rem]">2023</h2>
+              <h2 className="font-poppins font-medium text-[5rem]">2023</h2>
             </div>
           </div>
         </div>
@@ -78,24 +77,18 @@ function Umarah(props) {
         {/* For Mobile */}
         <div className="leftHeroUmarah bg-black h-[37.25rem] text-white pt-[9.438rem] text-center mt-4 xl:hidden">
           <div className="contentLeftHeroUmarah">
-            <h2 className="font-Raleway font-semibold text-6xl">UMRAH</h2>
-            <h2 className="font-Raleway font-semibold text-4xl pt-4">
+            <h2 className="font-raleway font-semibold text-6xl">UMRAH</h2>
+            <h2 className="font-raleway font-semibold text-4xl pt-4">
               PAKAGES
             </h2>
-            <h2 className="font-Poppins font-medium text-[4rem]">2022</h2>
+            <h2 className="font-poppins font-medium text-[4rem]">2022</h2>
           </div>
         </div>
 
         <div className="containerUmarahPkg">
-          <AnimationOnScroll
-            delay={100}
-            animateOnce={true}
-            animateIn="animate__fadeIn"
-          >
-            <h2 className="text-center font-Raleway font-bold text-5xl sm:text-7xl pt-28">
-              Pricing
-            </h2>
-          </AnimationOnScroll>
+          <h2 className="text-center font-raleway font-bold text-5xl sm:text-7xl pt-28">
+            Pricing
+          </h2>
 
           <div className="containerPkg max-w-[94.5%] mx-auto flex items-center flex-wrap gap-32 xl:gap-0 justify-center pb-10 pt-20">
             {packages.map((pkg, index) => (
@@ -107,74 +100,63 @@ function Umarah(props) {
                     : "w-[23.563rem] h-[35rem]"
                 }`}
               >
-                <AnimationOnScroll
-                  animateOnce={true}
-                  animateIn={
-                    index === 0
-                      ? "animate__fadeInLeft"
-                      : index === 1
-                      ? "animate__fadeInUp"
-                      : "animate__fadeInRight"
-                  }
-                >
-                  <div className="containerChild">
-                    <div
-                      className={`contentContainerChild bg-black flex justify-center rounded-xl h-[13.313rem] items-center relative ${
-                        index === 1 ? "contentContainerChild2" : ""
-                      }`}
-                    >
-                      {pkg.topRated && (
-                        <img
-                          src={topRated}
-                          alt="Top Rated"
-                          className="absolute top-[-5%] left-[7%]"
-                        />
-                      )}
-                      <h2 className="font-Poppins text-4xl sm:text-[2.625rem] text-white font-medium">
-                        {pkg.price}
-                      </h2>
-                    </div>
-                  </div>
+                <div className="containerChild">
                   <div
-                    className={`containerChild flex justify-center flex-col items-center space-y-12 bg-white ${
-                      index === 1
-                        ? "pb-4 xl:pb-0 xl:h-[27.7rem]"
-                        : "h-[21.813rem]"
+                    className={`contentContainerChild bg-black flex justify-center rounded-xl h-[13.313rem] items-center relative ${
+                      index === 1 ? "contentContainerChild2" : ""
                     }`}
                   >
-                    <div className="containerChild font-Poppins text-xs space-y-6">
-                      <p className="pt-8 text-center max-w-[14rem] sm:max-w-[18rem]">
-                        {pkg.description}
-                      </p>
-                      <ul className="space-y-3">
-                        {pkg.items.map((item, i) => (
-                          <li key={i} className="flex items-center gap-8">
-                            <svg
-                              width="19"
-                              height="12"
-                              viewBox="0 0 19 12"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M2 5.36842L5.67452 9.33949C6.02199 9.715 6.59685 9.76768 7.00679 9.46159L17 2"
-                                stroke="black"
-                                strokeWidth="3"
-                                strokeLinecap="round"
-                              />
-                            </svg>
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <a target="_blank" rel="noreferrer" href={pkg.whatsappLink}>
-                      <button className="buyNowBtn font-Poppins text-xl sm:text-2xl text-white">
-                        Buy Now
-                      </button>
-                    </a>
+                    {pkg.topRated && (
+                      <Image
+                        src={topRated}
+                        alt="Top Rated"
+                        className="absolute top-[-5%] left-[7%]"
+                      />
+                    )}
+                    <h2 className="font-poppins text-4xl sm:text-[2.625rem] text-white font-medium">
+                      {pkg.price}
+                    </h2>
                   </div>
-                </AnimationOnScroll>
+                </div>
+                <div
+                  className={`containerChild flex justify-center flex-col items-center space-y-12 bg-white ${
+                    index === 1
+                      ? "pb-4 xl:pb-0 xl:h-[27.7rem]"
+                      : "h-[21.813rem]"
+                  }`}
+                >
+                  <div className="containerChild font-poppins text-xs space-y-6">
+                    <p className="pt-8 text-center max-w-[14rem] sm:max-w-[18rem]">
+                      {pkg.description}
+                    </p>
+                    <ul className="space-y-3">
+                      {pkg.items.map((item, i) => (
+                        <li key={i} className="flex items-center gap-8">
+                          <svg
+                            width="19"
+                            height="12"
+                            viewBox="0 0 19 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M2 5.36842L5.67452 9.33949C6.02199 9.715 6.59685 9.76768 7.00679 9.46159L17 2"
+                              stroke="black"
+                              strokeWidth="3"
+                              strokeLinecap="round"
+                            />
+                          </svg>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <a target="_blank" rel="noreferrer" href={pkg.whatsappLink}>
+                    <button className="buyNowBtn font-poppins text-xl sm:text-2xl text-white">
+                      Buy Now
+                    </button>
+                  </a>
+                </div>
               </div>
             ))}
           </div>
