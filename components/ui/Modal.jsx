@@ -1,6 +1,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 import React, { Fragment, useState } from "react";
-import Icon from "../Components/Icon";
+// import Icon from "../Components/Icon";
+import Icon from "../ui/Icon";
 
 const Modal = ({
   activeModal,
@@ -166,7 +167,7 @@ const Modal = ({
                       )}
                     </div>
                     <div
-                      className={`px-6 py-8 ${
+                      className={`px-6 pt-4 pb-8 ${
                         scrollContent ? "overflow-y-auto max-h-[400px]" : ""
                       }`}
                     >
