@@ -190,7 +190,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="w-full mt-4">
+              <div className="w-full mt-4 font-poppins">
                 <label className="block mb-2 text-sm font-medium text-gray-600 ">
                   Message
                 </label>
