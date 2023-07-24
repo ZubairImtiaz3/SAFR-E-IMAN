@@ -19,7 +19,10 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "SAFR-E-IMAN",
+  title: {
+    default: "SAFR-E-IMAN",
+    template: "%s",
+  },
   description:
     "Travel & Tourism Agency located in Qila Ahmad Abad, District Narowal, Punjab Pakistan. We Provide all Airline Tickets, Services of UMRAH, Visa processing of Saudia Arabia and visit Visas of multiple Countries. We provide freedom to our Clients to make thier own Travel plans.",
   icons: {
