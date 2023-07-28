@@ -1,8 +1,12 @@
 "use client";
 
+import { Parallax } from "react-parallax";
+
 import Image from "next/image";
 import topRated from "@/public/assets/umarah/toprated.jpg";
 import Animatedpage from "@/components/app/route/Animatedpage";
+
+const parallexImg = "/assets/umarah/parallex.jpg";
 
 //SCROLLTOTOP
 import ScrollTop from "react-scrolltop-button";
@@ -62,14 +66,27 @@ function Umarah(props) {
       />
 
       <Animatedpage>
-        <div className="heroUmarah hidden mt-4 xl:block">
-          <div className="leftHeroUmarah bg-black w-[75%] h-[37.25rem] text-white pt-[9.438rem] text-center">
-            <div className="contentLeftHeroUmarah translate-x-44">
-              <h2 className="font-raleway font-semibold text-7xl">UMRAH</h2>
-              <h2 className="font-raleway font-semibold text-5xl pt-4">
-                PAKAGES
-              </h2>
-              <h2 className="font-poppins font-medium text-[5rem]">2023</h2>
+        <div className="heroUmarahi hidden mt-4 xl:block">
+          <div className="flex">
+            <div className="leftHeroUmarah bg-black w-[75%] h-[37.25rem] text-white pt-[9.438rem] text-center">
+              <div className="contentLeftHeroUmarahi translate-x-44">
+                <h2 className="font-raleway font-semibold text-7xl">UMRAH</h2>
+                <h2 className="font-raleway font-semibold text-5xl pt-4">
+                  PAKAGES
+                </h2>
+                <h2 className="font-poppins font-medium text-[5rem]">2023</h2>
+              </div>
+            </div>
+            <div className="h-[37.25rem] w-[25%]">
+              <Parallax
+                bgImage={parallexImg}
+                strength={300}
+                bgImageStyle={{
+                  height: "44.25rem",
+                }}
+              >
+                <div className="h-[37.25rem]"></div>
+              </Parallax>
             </div>
           </div>
         </div>
