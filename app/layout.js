@@ -44,6 +44,11 @@ export const metadata = {
   manifest: "/site.webmanifest",
 };
 
+//scroll to  top on link
+const linkScroll = () => {
+  window.scroll(0, 0);
+};
+
 export default function RootLayout({ children }) {
   const [loading, setLoading] = useState(true);
 
