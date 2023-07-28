@@ -1,15 +1,15 @@
 "use client";
 import { useState, useRef } from "react";
 import ScrollTop from "react-scrolltop-button";
-import conatctImg from "../../public/assets/contact/contact.svg";
+import conatctImg from "@/public/assets/contact/contact.svg";
 import Image from "next/image";
 import ClipLoader from "react-spinners/ClipLoader";
 import emailjs from "@emailjs/browser";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import Modal from "../../components/ui/Modal";
-import Iframe from "./map/Iframe";
+import Modal from "@/components/ui/Modal";
+import Iframe from "@/components/app/map/Iframe";
 import Animatedpage from "@/components/app/route/Animatedpage";
 
 //Yup Validation
@@ -197,7 +197,7 @@ export default function Contact() {
 
                 <textarea
                   {...register("message")}
-                  className={`block w-full h-40 px-4 py-2 text-gray-700 bg-white border rounded-md 
+                  className={`block w-full h-40 px-4 py-4 text-gray-700 bg-white border rounded-md 
                 ${errors.message ? "border-red-500" : ""}`}
                 ></textarea>
                 {errors.message && (
@@ -231,12 +231,10 @@ export default function Contact() {
             title="Success"
             centered
           >
-            <div className="">
-              <p className="text-black leading-5">
+            <div className="font-poppins">
+              <p className="text-black leading-5 dark:text-white">
                 Your Queries Submitted Successfully. Our Team will reach out to
-                you soon.
-                <br />
-                THANKYOU !
+                you soon. THANKYOU !
               </p>
             </div>
           </Modal>

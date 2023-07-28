@@ -87,7 +87,7 @@ const Modal = ({
                       <div
                         className={`relative overflow-hidden py-4 px-5 text-white flex justify-between  ${themeClass}`}
                       >
-                        <h2 className="capitalize leading-6 tracking-wider font-medium text-base text-white">
+                        <h2 className="capitalize leading-6 tracking-wider font-medium text-base text-white font-poppins">
                           {title}
                         </h2>
                         {showCloseIcon && (
@@ -157,7 +157,7 @@ const Modal = ({
                     <div
                       className={`relative overflow-hidden py-4 px-5 text-white flex justify-between  ${themeClass}`}
                     >
-                      <h2 className="capitalize leading-6 tracking-wider font-medium text-base text-white">
+                      <h2 className="capitalize leading-6 tracking-wider font-medium text-base text-white font-poppins">
                         {title}
                       </h2>
                       {showCloseIcon && (
@@ -167,7 +167,7 @@ const Modal = ({
                       )}
                     </div>
                     <div
-                      className={`px-6 pt-4 pb-8 ${
+                      className={`px-6 py-8 ${
                         scrollContent ? "overflow-y-auto max-h-[400px]" : ""
                       }`}
                     >
