@@ -84,16 +84,16 @@ export default function Contact() {
         <section
           className={`contact w-full max-w-3xl px-6 py-4 mx-auto bg-white rounded-md shadow-md mt-20`}
         >
-          <h2 className="text-3xl font-Raleway font-semibold text-center text-gray-800">
+          <h2 className="text-3xl font-raleway font-semibold text-center text-gray-800">
             Get in touch
           </h2>
 
-          <p className="mt-3 font-Poppins text-center text-gray-600">
+          <p className="mt-3 font-poppins text-center text-gray-600">
             Discover hidden gems, book accommodations, and create unforgettable
             memories.
           </p>
 
-          <div className="font-Poppins grid grid-cols-1 gap-6 mt-6 sm:grid-cols-2 md:grid-cols-3">
+          <div className="font-poppins grid grid-cols-1 gap-6 mt-6 sm:grid-cols-2 md:grid-cols-3">
             <a
               href="https://goo.gl/maps/tTEhxaUZiVWLvC9N7"
               className="flex flex-col items-center px-4 py-3 text-gray-700 transition-colors duration-300 transform rounded-md  hover:bg-[#efbe699f]"
@@ -190,7 +190,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="w-full mt-4">
+              <div className="w-full mt-4 font-poppins">
                 <label className="block mb-2 text-sm font-medium text-gray-600 ">
                   Message
                 </label>
@@ -205,7 +205,7 @@ export default function Contact() {
                 )}
               </div>
 
-              <div className="font-Poppins flex justify-center mt-6">
+              <div className="font-poppins flex justify-center mt-6">
                 <button
                   type="submit"
                   value="Send"
@@ -232,7 +232,7 @@ export default function Contact() {
             centered
           >
             <div className="">
-              <p className="text-white leading-5">
+              <p className="text-black leading-5">
                 Your Queries Submitted Successfully. Our Team will reach out to
                 you soon.
                 <br />
