@@ -80,7 +80,7 @@ function Umarah(props) {
             <div className="h-[37.25rem] w-[25%]">
               <Parallax
                 bgImage={parallexImg}
-                strength={300}
+                strength={200}
                 bgImageStyle={{
                   height: "44.25rem",
                 }}
