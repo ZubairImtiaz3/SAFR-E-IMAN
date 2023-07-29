@@ -20,12 +20,12 @@ function Infobar(props) {
           <div className="contentTwo hidden sm:flex items-center space-x-[0.375rem]">
             <Image src={mailSvg} alt="mailIcon" />
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=safinaalmadina@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=safreimantravel@gmail.com"
               target="_blank"
               rel="noreferrer"
             >
               <p className="font-poppins text-base text-white">
-                Safinaalmadina@gmail.com
+                Safreimantravel@gmail.com
               </p>
             </a>
           </div>
@@ -34,7 +34,11 @@ function Infobar(props) {
           <a href="/">
             <Image className="icon" src={fbSvg} alt="fbIcon" />
           </a>
-          <a href="/">
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://wa.me/923446463437?text="
+          >
             <Image className="icon" src={whatsappSvg} alt="whatsappIcon" />
           </a>
           <a href="/">
