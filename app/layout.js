@@ -1,6 +1,5 @@
-import Navbar from "@/components/app/Navbar";
-import Infobar from "@/components/app/Infobar";
-import Footer from "@/components/app/Footer";
+import ContentWithTimeout from "@/components/app/loader/ContentWithTimeout";
+import Loader from "@/components/ui/loader/InitialLoader";
 import "./globals.css";
 import { Raleway, Poppins } from "next/font/google";
 
@@ -38,12 +37,7 @@ export default function RootLayout({ children }) {
     <>
       <html lang="en">
         <body className={`${raleway.variable} ${poppins.variable}`}>
-          <>
-            <Infobar />
-            <Navbar />
-            {children}
-            <Footer />
-          </>
+          <ContentWithTimeout>{children}</ContentWithTimeout>
         </body>
       </html>
     </>
