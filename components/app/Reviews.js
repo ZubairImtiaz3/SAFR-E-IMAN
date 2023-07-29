@@ -52,7 +52,7 @@ function Reviews() {
     {
       image: review1,
       rating: fiveStar,
-      title: "Rehan Rana",
+      title: "Rana Sahil",
       discription:
         "They arranged a custom trip for me and my family. All the arrangements were spot on. They really care about their clients and it shows in their service.",
     },

@@ -22,9 +22,9 @@ const socialLinks = [
     alt: "Facebook",
   },
   {
-    href: "#",
+    href: "https://wa.me/923446463437?text=",
     imgSrc: fw,
-    alt: "Twitter",
+    alt: "Whatsapp",
   },
   {
     href: "#",
@@ -64,8 +64,8 @@ const contactInfo = [
   },
   {
     src: footermail,
-    link: "https://mail.google.com/mail/?view=cm&fs=1&to=safinaalmadina@gmail.com",
-    text: "Safinaalmadina@gmail.com",
+    link: "https://mail.google.com/mail/?view=cm&fs=1&to=safreimantravel@gmail.com",
+    text: "Safreimantravel@gmail.com",
   },
   {
     src: footerlocation,

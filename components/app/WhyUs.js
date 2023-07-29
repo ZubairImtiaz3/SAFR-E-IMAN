@@ -46,8 +46,8 @@ function WhyUs() {
           <h2 className="font-raleway text-3xl sm:text-[2.5rem] font-bold text-center">
             Why Book with
           </h2>
-          <h2 className="font-raleway text-3xl sm:text-[2.5rem] font-bold text-[#5E5E5E] text-center">
-            Safina Al Madina Travels?
+          <h2 className="font-raleway text-3xl sm:text-[2.5rem] font-bold text-[#5E5E5E] text-center md:tracking-[0.02em]">
+            Safr e Iman Travels?
           </h2>
         </div>
 
