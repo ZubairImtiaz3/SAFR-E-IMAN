@@ -80,7 +80,7 @@ function Navbar(props) {
         }
       >
         <Link href="/" aria-label="Travels & Tour Agency">
-          <Image src={logo} alt="Safina Al Madina" />
+          <Image priority={true} src={logo} alt="Safina Al Madina" />
         </Link>
 
         <div className="mobileMenu mt-2 xl:hidden">
