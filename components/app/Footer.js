@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,6 +10,10 @@ import ff from "@/public/assets/partials/ff.png";
 import fw from "@/public/assets/partials/fw.png";
 import fi from "@/public/assets/partials/fi.png";
 import footerbg from "@/public/assets/footer/footerbg.svg";
+
+const scrollToTop = () => {
+  window.scrollTo(0, 0);
+};
 
 const socialLinks = [
   {
@@ -113,7 +118,14 @@ function Footer(props) {
                         strokeLinejoin="round"
                       />
                     </svg>
-                    <Link href={link.to}>{link.label}</Link>
+                    <Link
+                      onClick={() => {
+                        if (link.label.toLowerCase() === "home") scrollToTop();
+                      }}
+                      href={link.to}
+                    >
+                      {link.label}
+                    </Link>
                   </li>
                 ))}
               </ul>
