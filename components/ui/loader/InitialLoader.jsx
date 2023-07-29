@@ -12,9 +12,9 @@ import logoLoader from "@/public/assets/partials/loader.svg";
 export default function Loader() {
   return (
     <div className="loader">
-      <div className="loaderContent">
+      <div className="loaderContent relative bottom-16 md:bottom-0">
         <Image
-          className="w-[290px] sm:relative sm:right-[2rem] mb-9"
+          className="w-[290px] relative right-1 sm:right-[2rem] mb-9"
           src={logoLoader}
           alt="loader"
         />
