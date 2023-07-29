@@ -7,18 +7,18 @@ const PropagateLoader = dynamic(
   }
 );
 
-import logoLoader from "@/public/assets/partials/logo2.svg";
+import logoLoader from "@/public/assets/partials/loader.svg";
 
 export default function Loader() {
   return (
     <div className="loader">
       <div className="loaderContent relative -top-16 sm:static">
         <Image
-          className="w-[290px] sm:w-auto sm:relative sm:left-[-7%]"
+          className="w-[290px] sm:relative sm:right-[2rem] mb-9"
           src={logoLoader}
           alt="loader"
         />
-        <PropagateLoader color="#ceb041" />
+        <PropagateLoader className="" color="#ceb041" />
       </div>
     </div>
   );

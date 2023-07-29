@@ -13,8 +13,8 @@ const slideData = [
     backgroundImage: "slide1.jpg",
   },
   {
-    label: "Safina Travels",
-    title: "Safina Al Madina",
+    label: "Travel Agency",
+    title: "Safr e Iman",
     subtitle:
       "Travel & Tourism Agency located in Qila Ahmad Abad, District Narowal, Punjab Pakistan. We Provide all Airline Tickets, Services of UMRAH, Visa processing of Saudia Arabia and visit Visas of multiple Countries.",
     backgroundImage: "slide2.jpg",
