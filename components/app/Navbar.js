@@ -10,11 +10,6 @@ function Navbar(props) {
   const [open, setOpen] = useState(false);
   const [navFix, setnavFix] = useState(false);
 
-  //scroll to  top on link
-  const linkScroll = () => {
-    window.scroll(0, 0);
-  };
-
   const toggle = () => {
     setOpen((prevState) => !prevState);
   };
@@ -26,7 +21,6 @@ function Navbar(props) {
 
     const scrollTopSmaller = () => {
       hideHam();
-      linkScroll();
     };
 
     return (
@@ -128,14 +122,10 @@ function Navbar(props) {
 
         <ul className="mainLinks font-raleway text-white text-base space-x-[3.75rem] hidden xl:flex">
           <li>
-            <Link href="/" onClick={linkScroll}>
-              Home
-            </Link>
+            <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/umarah" onClick={linkScroll}>
-              Umrah
-            </Link>
+            <Link href="/umarah">Umrah</Link>
           </li>
           <li>
             <ScrollLink
@@ -150,9 +140,7 @@ function Navbar(props) {
             </ScrollLink>
           </li>
           <li>
-            <Link href="/contact" onClick={linkScroll}>
-              Contact
-            </Link>
+            <Link href="/contact">Contact</Link>
           </li>
           <li>
             <ScrollLink
