@@ -152,7 +152,7 @@ export default function Contact() {
 
           <div className="mt-6 ">
             <form ref={form} onSubmit={handleSubmit(sendEmail)}>
-              <div className="font-poppins items-center -mx-2 md:flex">
+              <div className="font-poppins -mx-2 md:flex items-baseline">
                 <div className="w-full mx-2">
                   <label className="block mb-2 text-sm font-medium text-gray-600 ">
                     Name
