@@ -7,7 +7,7 @@ export default function ContentWithTimeout({ children }) {
   const [isTimeoutFinished, setIsTimeoutFinished] = useState(false);
 
   useEffect(() => {
-    const timeoutId = setTimeout(() => setIsTimeoutFinished(true), 2500000);
+    const timeoutId = setTimeout(() => setIsTimeoutFinished(true), 2500);
     return () => clearTimeout(timeoutId);
   }, []);
 
