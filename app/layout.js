@@ -1,5 +1,4 @@
 import ContentWithTimeout from "@/components/app/loader/ContentWithTimeout";
-import Loader from "@/components/ui/loader/InitialLoader";
 import "./globals.css";
 import { Raleway, Poppins } from "next/font/google";
 
