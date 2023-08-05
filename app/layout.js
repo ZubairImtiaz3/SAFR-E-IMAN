@@ -18,7 +18,7 @@ const poppins = Poppins({
 
 export const metadata = {
   title: {
-    default: "SAFR-E-IMAN",
+    default: "SAFR-E-IMAN Travels & Tours",
     template: "%s",
   },
   description:
