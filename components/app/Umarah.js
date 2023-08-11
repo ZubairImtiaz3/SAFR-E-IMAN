@@ -98,7 +98,7 @@ function Umarah(props) {
             <h2 className="font-raleway font-semibold text-4xl pt-4">
               PAKAGES
             </h2>
-            <h2 className="font-poppins font-medium text-[4rem]">2022</h2>
+            <h2 className="font-poppins font-medium text-[4rem]">2023</h2>
           </div>
         </div>
 
