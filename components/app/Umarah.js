@@ -1,5 +1,5 @@
 "use client";
-
+import React, { useState, useEffect } from "react";
 import { Parallax } from "react-parallax";
 
 import Image from "next/image";
@@ -11,49 +11,42 @@ const parallexImg = "/assets/umarah/parallex.jpg";
 //SCROLLTOTOP
 import ScrollTop from "react-scrolltop-button";
 
-const packages = [
-  {
-    price: "Rs 1,80,000/-",
-    description:
-      "Don't worry if you afford less money, You can still perform Umrah. We have cheapest Umrah package for 21 Days. Book Now and Pack your Bags",
-    items: [
-      "Return Air Ticket",
-      "Umrah Visa",
-      "Transport (4 ways)",
-      "Hotel (1000m)",
-    ],
-    whatsappLink:
-      "https://api.whatsapp.com/send?phone=923446463437&text=Salam%20!%20Want%20to%20book%20your%20BUDGET%20Umrah%20Package",
-  },
-  {
-    price: "Rs 1,95,000/-",
-    description:
-      "Perform the Religious Ritual with all the comfort at low price. You will definately experiance the best services related to the travelling, cuisine and accomodation",
-    items: [
-      "Return Air Ticket",
-      "Umrah Visa",
-      "Transport (4 ways)",
-      "Makkah Hotel (500m)",
-      "Madina Hotel (500m)",
-    ],
-    whatsappLink: "https://wa.me/923446463437",
-    topRated: true,
-  },
-  {
-    price: "Rs 2,10,000/-",
-    description:
-      "You will get star hotels that are closest to Khana Kaba and Masjid e Nabvi. Travel around Makkah and Madinah in our Special Air conditioned Transport",
-    items: [
-      "Return Air Ticket",
-      "Umrah Visa",
-      "Transport (4 ways)",
-      "Hotel (250m)",
-    ],
-    whatsappLink: "https://wa.me/923446463437",
-  },
-];
+import { fetchDocuments } from "@/components/firebase/store/Httpservice";
 
 function Umarah(props) {
+  const [packagesData, setPackagesData] = useState([]);
+
+  useEffect(() => {
+    fetchDocuments("/Packages")
+      .then((data) => {
+        // Extract the topRated package
+        const topRatedPackage = data.find((pkg) => pkg.topRated);
+
+        // Filter out the topRated package from the original data
+        const otherPackages = data.filter((pkg) => !pkg.topRated);
+
+        // Construct a new array with the desired order
+        const orderedData = [
+          ...otherPackages.slice(0, 1), // get packages before the topRated one
+          topRatedPackage,
+          ...otherPackages.slice(1), // get packages after the topRated one
+        ];
+
+        setPackagesData(orderedData);
+      })
+      .catch((error) => {
+        console.error("Error fetching data: ", error);
+      });
+  }, []);
+
+  function customNumberFormat(num) {
+    let str = num.toString();
+
+    if (str.length <= 3) return str;
+
+    return str.slice(0, 1) + "," + str.slice(1, 3) + "," + str.slice(3);
+  }
+
   return (
     <>
       <ScrollTop
@@ -70,9 +63,11 @@ function Umarah(props) {
           <div className="flex">
             <div className="leftHeroUmarah bg-black w-[75%] h-[37.25rem] text-white pt-[9.438rem] text-center">
               <div className="contentLeftHeroUmarahi translate-x-44">
-                <h2 className="font-raleway font-semibold text-7xl">UMRAH</h2>
-                <h2 className="font-raleway font-semibold text-5xl pt-4">
-                  PAKAGES
+                <h2 className="font-raleway font-semibold text-7xl uppercase">
+                  UMRAH
+                </h2>
+                <h2 className="font-raleway font-semibold text-5xl pt-4 uppercase">
+                  PACKAGES
                 </h2>
                 <h2 className="font-poppins font-medium text-[5rem]">2023</h2>
               </div>
@@ -94,8 +89,10 @@ function Umarah(props) {
         {/* For Mobile */}
         <div className="leftHeroUmarah bg-black h-[37.25rem] text-white pt-[9.438rem] text-center mt-4 xl:hidden">
           <div className="contentLeftHeroUmarah">
-            <h2 className="font-raleway font-semibold text-6xl">UMRAH</h2>
-            <h2 className="font-raleway font-semibold text-4xl pt-4">
+            <h2 className="font-raleway font-semibold text-6xl uppercase">
+              UMRAH
+            </h2>
+            <h2 className="font-raleway font-semibold text-4xl pt-4 uppercase">
               PAKAGES
             </h2>
             <h2 className="font-poppins font-medium text-[4rem]">2023</h2>
@@ -108,7 +105,7 @@ function Umarah(props) {
           </h2>
 
           <div className="containerPkg max-w-[94.5%] mx-auto flex items-center flex-wrap gap-32 xl:gap-0 justify-center pb-10 pt-20">
-            {packages.map((pkg, index) => (
+            {packagesData.map((pkg, index) => (
               <div
                 key={index}
                 className={`contentPkg ${
@@ -131,7 +128,7 @@ function Umarah(props) {
                       />
                     )}
                     <h2 className="font-poppins text-4xl sm:text-[2.625rem] text-white font-medium">
-                      {pkg.price}
+                      Rs {customNumberFormat(pkg.pkgPrice)}/-
                     </h2>
                   </div>
                 </div>
@@ -147,7 +144,7 @@ function Umarah(props) {
                       {pkg.description}
                     </p>
                     <ul className="space-y-3">
-                      {pkg.items.map((item, i) => (
+                      {pkg.features.map((item, i) => (
                         <li key={i} className="flex items-center gap-8">
                           <svg
                             width="19"
@@ -168,7 +165,11 @@ function Umarah(props) {
                       ))}
                     </ul>
                   </div>
-                  <a target="_blank" rel="noreferrer" href={pkg.whatsappLink}>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://api.whatsapp.com/send?phone=923446463437"
+                  >
                     <button className="buyNowBtn font-poppins text-xl sm:text-2xl text-white">
                       Buy Now
                     </button>
