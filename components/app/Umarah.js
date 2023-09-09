@@ -18,7 +18,7 @@ import { fetchDocuments } from "@/components/firebase/store/Httpservice";
 
 function Umarah(props) {
   const [packagesData, setPackagesData] = useState([]);
-  const [infoData, setInfoData] = useState(null);
+  const [infoData, setInfoData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -109,7 +109,7 @@ function Umarah(props) {
               {infoData[0]?.heading}
             </h2>
             <h2 className="font-raleway font-semibold text-4xl pt-4 uppercase">
-              PAKAGES
+              PACKAGES
             </h2>
             <h2 className="font-poppins font-medium text-[4rem]">
               {infoData[0]?.year}
