@@ -39,7 +39,7 @@ const importantLinks = [
     label: "Home",
   },
   {
-    to: "/umrah",
+    to: "/umarah",
     label: "Umrah",
   },
   {
